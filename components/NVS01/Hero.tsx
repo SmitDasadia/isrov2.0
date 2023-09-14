@@ -13,11 +13,11 @@ const Hero = () => {
     <motion.section
       className="relative h-screen flex bg-center bg-cover"
       style={{
-        backgroundImage: `url('/AdityaL1/Aditya_L1Lunch2.png')`,
+        backgroundImage: `url('/NVS-01/NVS-O1BG.jpg')`,
       }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
-      {/* <img src="/public/AdityaL1/Aditya_L1Lunch2.png" alt="" /> */}
+      {/* <img src="/public" alt="" /> */}
       <motion.div
         className="container mx-auto flex flex-col justify-end h-full relative z-10 pb-10"
         initial="hidden"
@@ -26,14 +26,11 @@ const Hero = () => {
       >
         <div className="mb-8 ml-8">
           <h2 className="text-4xl sm:text-4xl md:text-6xl text-white pb-2 font-extrabold">
-            ADITYA-L1
+            NVS-01
           </h2>
-          <p className="text-3xl sm:text-3xl md:text-5xl text-white font-semibold">
-            Unveiling the Sun&apos;s secrets from space
-          </p>
         </div>
         <div className="pt-5 pb-10">
-          <Link href="https://www.youtube.com/watch?v=_IcgGYZTXQw" target="_">
+          <Link href="https://www.youtube.com/watch?v=zYVvY4D4MKA" target="_">
             <button className="self-start ml-8 mb-16 bg-white hover:bg-black hover:text-white text-black py-4 px-16 text-lg font-semibold transition duration-300">
               ReWatch
             </button>
@@ -41,8 +38,6 @@ const Hero = () => {
         </div>
       </motion.div>
     </motion.section>
-
-    
   );
 };
 

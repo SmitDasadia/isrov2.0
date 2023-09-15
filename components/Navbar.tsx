@@ -71,12 +71,13 @@ const Navbar: React.FC = () => {
                   <Link
                     href={link.route}
                     key={link.label}
-                    className={`relative flex justify-end gap-2 rounded-br-2xl p-4 ${
+                    onClick={closeMenu}
+                    className={`relative flex justify-end rounded-br-2xl p-2 ${
                       isActive ? " text-white " : "text-white hover:underline"
                     }`}
                   >
-                    <div className="flex items-center gap-5 font-bold">
-                      <div className="font-bold ">{link.label}</div>
+                    <div className="flex items-center gap-1 font-bold">
+                      <div className="font-bold text-32xl">{link.label}</div>
                     </div>
                   </Link>
                 );

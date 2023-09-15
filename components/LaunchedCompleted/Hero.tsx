@@ -9,7 +9,12 @@ interface HeroProps {
   videoLink: string;
 }
 
-const Hero: FC<HeroProps> = ({ title, subtitle, backgroundImage, videoLink }) => {
+const Hero: FC<HeroProps> = ({
+  title,
+  subtitle,
+  backgroundImage,
+  videoLink,
+}) => {
   const fadeInVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 1, delay: 0.5 } },
@@ -29,6 +34,7 @@ const Hero: FC<HeroProps> = ({ title, subtitle, backgroundImage, videoLink }) =>
         animate="visible"
         variants={fadeInVariants}
       >
+       
         <div className="mb-8 ml-8">
           <h2 className="text-4xl sm:text-4xl md:text-6xl text-white pb-2 font-extrabold">
             {title}
@@ -43,6 +49,7 @@ const Hero: FC<HeroProps> = ({ title, subtitle, backgroundImage, videoLink }) =>
               ReWatch
             </button>
           </Link>
+          
         </div>
       </motion.div>
     </motion.section>

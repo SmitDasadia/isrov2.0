@@ -13,6 +13,8 @@ const Info: FC<InfoProps> = ({ title, description, moreInfoLink }) => {
     <motion.section className="min-h-screen bg-black text-white">
       <div className="container mx-auto md:px-5 pt-16 flex flex-col items-center">
         <div className="container mx-auto p-10">
+          
+
           <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             {title}
           </h1>
@@ -25,6 +27,7 @@ const Info: FC<InfoProps> = ({ title, description, moreInfoLink }) => {
             </button>
           </Link>
         </div>
+        
       </div>
     </motion.section>
   );

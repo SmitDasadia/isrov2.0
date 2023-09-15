@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", stiffness: 500, damping: 30 }}
-            className={`flex-col justify-between gap-12 h-screen overflow-auto sidebar fixed top-0 right-0 bg-[#030303] p-10 transform-all z-50  w-1/4`}
+            className={`flex-col justify-between gap-12 h-screen overflow-auto sidebar fixed top-0 right-0 bg-[#030303] p-10 transform-all z-50 w-2/3 sm:w-1/4`}
           >
             <span
               onClick={toggleSidebar}

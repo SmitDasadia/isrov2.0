@@ -18,8 +18,8 @@ export const sidebarLinks = [
   },
   {
     
-    route: "/lunches",
-    label: "Lunches",
+    route: "/launches",
+    label: "Launches",
   },
   {
     

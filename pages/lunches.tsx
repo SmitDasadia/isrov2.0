@@ -26,16 +26,16 @@ const Lunches = () => {
                   />
                 </div>
                 <div className="text-white p-2 pt-5">
-                  <p className="font-semibold text-lg text-slate-400">
+                  <h1 className="font-semibold text-lg text-slate-400">
                     {launch.launchDate}
-                  </p>
-                  <h2 className="text-3xl font-blod">{launch.title}</h2>
+                  </h1>
+                  <h2 className="text-3xl font-bold">{launch.title}</h2>
                 </div>
-                <div className="pt-5">
+                <div className="pt-5 ml-2">
                   <Link href={launch.path}>
-                  <button className="flex justify-center items-center border hover:bg-white hover:text-black text-white py-4 px-16 text-lg font-semibold transition duration-300">
-              More Info
-            </button>
+                    <button className="flex justify-center items-center border hover:bg-white hover:text-black text-white py-4 px-16 text-lg font-semibold transition duration-300">
+                      More Info
+                    </button>
                   </Link>
                 </div>
               </motion.div>

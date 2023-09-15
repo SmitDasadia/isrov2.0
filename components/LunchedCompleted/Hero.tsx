@@ -1,9 +1,15 @@
-/* eslint-disable @next/next/no-img-element */
-import React from "react";
-import { motion } from "framer-motion";
+import React, { FC } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
-const Hero = () => {
+interface HeroProps {
+  title: string;
+  subtitle: string;
+  backgroundImage: string;
+  videoLink: string;
+}
+
+const Hero: FC<HeroProps> = ({ title, subtitle, backgroundImage, videoLink }) => {
   const fadeInVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 1, delay: 0.5 } },
@@ -13,7 +19,7 @@ const Hero = () => {
     <motion.section
       className="relative h-screen flex bg-center bg-cover"
       style={{
-        backgroundImage: `url('/Chandrayaan3/chandrayann3lunch.png')`,
+        backgroundImage: `url('${backgroundImage}')`,
       }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -25,15 +31,15 @@ const Hero = () => {
       >
         <div className="mb-8 ml-8">
           <h2 className="text-4xl sm:text-4xl md:text-6xl text-white pb-2 font-extrabold">
-            Chandrayaan-3
+            {title}
           </h2>
           <p className="text-3xl sm:text-3xl md:text-5xl text-white font-semibold">
-            Bringing the Moon closer to us.
+            {subtitle}
           </p>
         </div>
         <div className="pt-5 pb-10">
-          <Link href="https://www.youtube.com/watch?v=DLA_64yz8Ss" target="_">
-            <button className="self-start ml-8 mb-16 bg-white hover:bg-black hover:text-white text-black py-4 px-16 text-lg font-semibold transition duration-300">
+          <Link href={videoLink} target="_">
+            <button className="self-start ml-8 mb-16 border hover:bg-white hover:text-black text-white py-4 px-16 text-lg font-semibold transition duration-300">
               ReWatch
             </button>
           </Link>

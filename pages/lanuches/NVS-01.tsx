@@ -1,20 +1,35 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-/* eslint-disable @next/next/no-img-element */
-
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React from "react";
 import Head from "next/head";
-import Hero from "@/components/NVS01/Hero";
-import Info from "@/components/NVS01/Info";
+import Hero from "@/components/LunchedCompleted/Hero";
+import Info from "@/components/LunchedCompleted/Info";
+import { lunches } from "@/lib/data/lunches";
 
 const NVS01 = () => {
+  const NVS01Lunch = lunches.find((lunch) => lunch.title === "NVS-01");
+
+  const title = NVS01Lunch?.title || "";
+  const subtitle = NVS01Lunch?.subtitle || "";
+  const backgroundImage = NVS01Lunch?.backgroundImage || "";
+  const videoLink = NVS01Lunch?.videoLink || "";
+  const description = NVS01Lunch?.desc || "";
+  const moreInfoLink = NVS01Lunch?.moreInfoLink || "";
+
   return (
     <div>
       <Head>
         <title>Isro - NVS-01</title>
       </Head>
-      <Hero />
-      <Info/>
+      <Hero
+        title={title}
+        subtitle={subtitle}
+        backgroundImage={backgroundImage}
+        videoLink={videoLink}
+      />
+      <Info
+        title={title}
+        description={description}
+        moreInfoLink={moreInfoLink}
+      />
     </div>
   );
 };

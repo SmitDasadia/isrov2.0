@@ -7,7 +7,6 @@ import { CgClose } from "react-icons/cg";
 import { sidebarLinks } from "@/constants/index";
 import { usePathname, useRouter } from "next/navigation";
 
-
 const Navbar: React.FC = () => {
   const router = useRouter();
   const pathname = usePathname();
@@ -18,24 +17,29 @@ const Navbar: React.FC = () => {
   const toggleSidebar = () => {
     setIsSidebarVisible(!isSidebarVisible);
   };
+
+  const closeMenu = () => {
+    setIsSidebarVisible(false);
+  };
   return (
-    <nav  className="bg-transparent py-4 absolute top-0 w-full"
-    style={{
-      // Make the Navbar transparent
-      background: "none",
-      zIndex: 999, // Add a high z-index value
-    }}>
+    <nav
+      className="bg-transparent py-4 absolute top-0 w-full"
+      style={{
+        // Make the Navbar transparent
+        background: "none",
+        zIndex: 999, // Add a high z-index value
+      }}
+    >
       <div className="container mx-auto flex justify-center sm:justify-between items-center">
         <Link href="/">
-          <p className="flex items-center">
+          <div className="flex items-center">
             <img
               src="https://concretecivil.com/wp-content/uploads/2017/02/Indian_Space_Research_Organisation_Logo.svg-1024x990.png"
               alt="Logo"
               className="w-16 h-16"
             />
-          </p>
+          </div>
         </Link>
-       
       </div>
       <button onClick={toggleSidebar} className="absolute top-7 right-7 ">
         <div className="w-6 h-[2.5px] bg-white mb-1   "></div>
@@ -67,13 +71,12 @@ const Navbar: React.FC = () => {
                   <Link
                     href={link.route}
                     key={link.label}
-                    className={`relative flex justify-end gap-4 rounded-br-2xl p-4 ${
+                    className={`relative flex justify-end gap-2 rounded-br-2xl p-4 ${
                       isActive ? " text-white " : "text-white hover:underline"
                     }`}
                   >
                     <div className="flex items-center gap-5 font-bold">
-                      <p className="font-bold ">{link.label}</p>
-                      
+                      <div className="font-bold ">{link.label}</div>
                     </div>
                   </Link>
                 );
@@ -87,4 +90,3 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
-

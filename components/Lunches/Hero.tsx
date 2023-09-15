@@ -27,8 +27,8 @@ const Hero: React.FC<HeroProps> = ({ backgroundImage, title }) => {
         animate="visible"
         variants={fadeInVariants}
       >
-        <div className="mb-8 ml-8">
-          <h2 className="text-4xl sm:text-4xl md:text-6xl text-white pb-2 font-extrabold">
+        <div className="">
+          <h2 className="text-5xl sm:text-5xl md:text-6xl text-white pb-2 font-extrabold">
             {title}
           </h2>
         </div>

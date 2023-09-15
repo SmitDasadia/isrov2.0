@@ -9,7 +9,7 @@ const Lunches = () => {
   return (
     <div>
       <Head>
-        <title>ISRO - Launches</title>
+        <title>Isro  - Launches</title>
       </Head>
       <Hero backgroundImage="lunches/lunches.jpg" title="Launches" />
 

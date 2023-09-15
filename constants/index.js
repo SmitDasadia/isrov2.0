@@ -21,6 +21,11 @@ export const sidebarLinks = [
     route: "/lunches",
     label: "Lunches",
   },
+  {
+    
+    route: "/launchers",
+    label: "Launchers",
+  },
 
 ];
 

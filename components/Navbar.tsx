@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
                     }`}
                   >
                     <div className="flex items-center gap-1 font-bold">
-                      <div className="font-bold text-32xl">{link.label}</div>
+                      <div className="font-bold text-lg">{link.label}</div>
                     </div>
                   </Link>
                 );

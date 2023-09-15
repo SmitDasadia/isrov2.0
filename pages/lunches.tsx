@@ -2,14 +2,14 @@
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Hero from "@/components/Lunches/Hero";
+import Hero from "@/components/Launches/Hero";
 import { lunches } from "@/lib/data/lunches"; // Import your lunch data
 
 const Lunches = () => {
   return (
     <div>
       <Head>
-        <title>Isro  - Launches</title>
+        <title>Isro - Launches</title>
       </Head>
       <Hero backgroundImage="lunches/lunches.jpg" title="Launches" />
 
@@ -31,9 +31,9 @@ const Lunches = () => {
                   </h1>
                   <h2 className="text-3xl font-bold">{launch.title}</h2>
                 </div>
-                <div className="pt-5 ml-2">
+                <div className="pt-5 ml-2 flex justify-center items-center sm:justify-start sm:items-start ">
                   <Link href={launch.path}>
-                    <button className="flex justify-center items-center border hover:bg-white hover:text-black text-white py-4 px-16 text-lg font-semibold transition duration-300">
+                    <button className=" border hover:bg-white hover:text-black text-white py-4 px-16 text-lg font-semibold transition duration-300">
                       More Info
                     </button>
                   </Link>

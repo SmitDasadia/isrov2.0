@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import Hero from "@/components/Lunches/Hero";
+import Hero from "@/components/Launches/Hero";
 import Head from "next/head";
 import { lunchers } from "@/lib/data/lunchers";
-import { motion } from "framer-motion";
+import LaunchVehicles from "@/components/launchers/LaunchVehicles";
 
 const Launchers = () => {
   return (
@@ -12,14 +12,18 @@ const Launchers = () => {
       </Head>
       <Hero backgroundImage="/Lunchers/lunchers.png" title="Launchers" />
 
-      <motion.section className=" bg-black text-white">
-      <div className="container mx-auto  flex flex-col items-center">
-        <div className="container mx-auto p-10">
-          
-          <p className="py-2 text-2xl text-center font-bold">{lunchers.desc}</p>
+      <div className="pt-5 p-5">
+        {Object.values(lunchers.operational).map((vehicle,index) => (
+          <LaunchVehicles
+            key={vehicle.name}
+            name={vehicle.name}
+            description={vehicle.description}
+            img={vehicle.img}
+            path={vehicle.path}
+            alignment={index % 2 === 0 ? "left" : "right"}
+          />
+        ))}
         </div>
-      </div>
-    </motion.section>
     </div>
   );
 };

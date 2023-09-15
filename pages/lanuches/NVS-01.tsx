@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import Hero from "@/components/LunchedCompleted/Hero";
-import Info from "@/components/LunchedCompleted/Info";
+import Hero from "@/components/LaunchedCompleted/Hero";
+import Info from "@/components/LaunchedCompleted/Info";
 import { lunches } from "@/lib/data/lunches";
 
 const NVS01 = () => {

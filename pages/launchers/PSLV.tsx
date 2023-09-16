@@ -2,7 +2,9 @@
 import Hero from "@/components/launchers/Hero";
 import Hero2 from "@/components/launchers/Hero2";
 import Head from "next/head";
-import {pslv} from "@/lib/data/PSLV"
+import { pslv } from "@/lib/data/PSLV";
+import Overview from "@/components/launchers/Overview";
+import Slider from "@/components/launchers/Silder";
 const PSLV = () => {
   return (
     <div>
@@ -10,15 +12,14 @@ const PSLV = () => {
         <title>Isro - PSLV</title>
       </Head>
       <Hero
-        // backgroundImage="/Lunchers/PSLVBG3.png"  
-        backgroundImage="/Lunchers/PSLVBG3.png"  
+        backgroundImage="/Lunchers/PSLVBG3.png"
         title="PSLV"
         subtitle="The Workhorse of ISRO"
       />
 
-      <Hero2 backgroundImage=""  
-       
-       info={pslv.desc}/>
+      <Hero2 backgroundImage="" info={pslv.desc} />
+
+      <Slider/>
     </div>
   );
 };

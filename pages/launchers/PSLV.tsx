@@ -5,6 +5,7 @@ import Head from "next/head";
 import { pslv } from "@/lib/data/PSLV";
 import Overview from "@/components/launchers/Overview";
 import Slider from "@/components/launchers/Silder";
+import LaunchStats from "@/components/launchers/LaunchStats";
 const PSLV = () => {
   return (
     <div>
@@ -17,9 +18,10 @@ const PSLV = () => {
         subtitle="The Workhorse of ISRO"
       />
 
+      <LaunchStats data={pslv.LaunchStatistics} />
       <Hero2 backgroundImage="" info={pslv.desc} />
 
-      <Slider/>
+      <Slider />
     </div>
   );
 };

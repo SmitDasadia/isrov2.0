@@ -19,7 +19,7 @@ const Hero: React.FC<HeroProps> = ({ backgroundImage, title }) => {
         backgroundImage: `url('${backgroundImage}')`,
       }}
     >
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute inset-0 bg-black opacity-40"></div>
       {/* <img src="/public/AdityaL1/Aditya_L1Lunch2.png" alt="" /> */}
       <motion.div
         className="container mx-auto flex justify-center  items-center h-full relative z-10 pb-10"

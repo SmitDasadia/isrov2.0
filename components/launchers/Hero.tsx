@@ -20,7 +20,7 @@ const Hero: React.FC<HeroProps> = ({ backgroundImage, title, subtitle }) => {
         backgroundImage: `url('${backgroundImage}')`,
       }}
     >
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute inset-0 bg-black opacity-40"></div>
       
       <motion.div
         className="container mx-auto flex justify-center  items-center h-full relative z-10 pb-10"
@@ -30,10 +30,10 @@ const Hero: React.FC<HeroProps> = ({ backgroundImage, title, subtitle }) => {
       >
         
         <div className="p-5">
-          <h2 className="text-6xl sm:text-9xl md:text-9xl text-white pb-2 font-extrabold">
+          <h2 className="text-6xl sm:text-9xl md:text-9xl text-white pb-2 font-extrabold text-center">
             {title}
           </h2>
-          <h2 className="text-6xl sm:text-5xl md:text-6xl text-white pb-2 font-extrabold">
+          <h2 className="text-2xl text-center text-white pb-2 font-semibold">
             {subtitle}
           </h2>
         </div>

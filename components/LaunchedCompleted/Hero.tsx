@@ -27,7 +27,7 @@ const Hero: FC<HeroProps> = ({
         backgroundImage: `url('${backgroundImage}')`,
       }}
     >
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute inset-0 bg-black opacity-40"></div>
       <motion.div
         className="container mx-auto flex flex-col justify-end h-full relative z-10 pb-10"
         initial="hidden"

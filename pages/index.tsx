@@ -21,6 +21,13 @@ export default function Home() {
         buttonText="More Info"
         buttonLink="/lanuches/Adityal1"
       />
+        <ReusableHeroSection
+        backgroundImageUrl="/DS-SAR/DS-SARBG3.png"
+        title="Launch Compelted"
+        subtitle="DS-SAR"
+        buttonText="More Info"
+        buttonLink="/lanuches/DS-SAR"
+      />
       <ReusableHeroSection
         backgroundImageUrl="/Chandrayaan3/chandrayann3lunch2.png"
         title="Launch Compelted"

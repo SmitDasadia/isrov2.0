@@ -2,7 +2,6 @@
 import Hero from "@/components/launchers/Hero";
 import Hero2 from "@/components/launchers/Hero2";
 import Head from "next/head";
-import { sslv } from "@/lib/data/sslv";
 import Overview from "@/components/launchers/Overview";
 import LaunchStats from "@/components/launchers/LaunchStats";
 import Stage1 from "@/components/launchers/Stage1";
@@ -10,6 +9,7 @@ import Stage2 from "@/components/launchers/Stage2";
 import Stage3 from "@/components/launchers/Stage3";
 import Stage4 from "@/components/launchers/Stage4";
 import ReusableSlider from "@/components/launchers/Silder";
+import { sslv } from "@/lib/data/SSLV";
 
 const SSLV = () => {
   const items = [

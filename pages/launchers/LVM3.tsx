@@ -5,10 +5,10 @@ import Head from "next/head";
 import Overview from "@/components/launchers/Overview";
 import LaunchStats from "@/components/launchers/LaunchStats";
 import ReusableSlider from "@/components/launchers/Silder";
-import { lvm3 } from "@/lib/data/LVM3";
 import Stage1 from "@/components/launchers/LVM3/Stage1";
 import Stage2 from "@/components/launchers/LVM3/Stage2";
 import Stage3 from "@/components/launchers/LVM3/Stage3";
+import { lvm3 } from "@/lib/data/LVM3";
 const LVM3 = () => {
   const items = [
     <Overview

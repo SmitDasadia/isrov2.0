@@ -10,6 +10,7 @@ import Stage3 from "@/components/launchers/Stage3";
 import Stage4 from "@/components/launchers/Stage4";
 import ReusableSlider from "@/components/launchers/Silder";
 import { sslv } from "@/lib/data/SSLV";
+import VideoHero from "@/components/VideoHero";
 
 const SSLV = () => {
   const items = [
@@ -99,6 +100,13 @@ const SSLV = () => {
       <Hero2 backgroundImage="" info={sslv.desc} />
 
       <ReusableSlider items={items} />
+      <VideoHero
+        backgroundImageUrl={"/Lunchers/SSLVBGLAUNCH.png"}
+        title={"Video"}
+        subtitle={"PSLV LAUNCH"}
+        buttonText={"Watch Now"}
+        buttonLink={"https://www.isro.gov.in/mission_SSLV_D2_lift-off.html"}
+      />
     </div>
   );
 };

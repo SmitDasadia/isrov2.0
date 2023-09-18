@@ -9,6 +9,7 @@ import Stage1 from "@/components/launchers/LVM3/Stage1";
 import Stage2 from "@/components/launchers/LVM3/Stage2";
 import Stage3 from "@/components/launchers/LVM3/Stage3";
 import { lvm3 } from "@/lib/data/LVM3";
+import VideoHero from "@/components/VideoHero";
 const LVM3 = () => {
   const items = [
     <Overview
@@ -86,6 +87,7 @@ const LVM3 = () => {
       <Hero2 backgroundImage="" info={lvm3.desc} />
 
       <ReusableSlider items={items} />
+      <VideoHero backgroundImageUrl={"/Lunchers/LVM3LAUNCH.png"} title={"Video"} subtitle={"LVM3 LAUNCH"} buttonText={"Watch Now"} buttonLink={"https://www.isro.gov.in/LVM3_M2_Liftoff_cameraview.html"}/>
     </div>
   );
 };

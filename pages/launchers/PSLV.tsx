@@ -12,6 +12,7 @@ import Stage3 from "@/components/launchers/Stage3";
 import Stage4 from "@/components/launchers/Stage4";
 import PayloadFairing from "@/components/launchers/PayloadFairing";
 import ReusableSlider from "@/components/launchers/Silder";
+import VideoHero from "@/components/VideoHero";
 const PSLV = () => {
   const items = [
     <Overview
@@ -41,7 +42,9 @@ const PSLV = () => {
       TotalThrust={pslv.Boosters.TotalThrust}
       SpecificImpulse={pslv.Boosters.SpecificImpulse}
       BurnTime={pslv.Boosters.BurnTime}
-      Propellant={pslv.Boosters.Propellant} stageName={"Boosters (PSLV-XL/QL/DL)"}    />,
+      Propellant={pslv.Boosters.Propellant}
+      stageName={"Boosters (PSLV-XL/QL/DL)"}
+    />,
     <Stage1
       key={pslv.launcher}
       launcher={pslv.launcher}
@@ -53,7 +56,9 @@ const PSLV = () => {
       MaximumThrust={pslv.FirstStage.MaximumThrust}
       SpecificImpulse={pslv.FirstStage.SpecificImpulse}
       BurnTime={pslv.FirstStage.BurnTime}
-      Propellant={pslv.FirstStage.Propellant} stageName={"First Stage"}    />,
+      Propellant={pslv.FirstStage.Propellant}
+      stageName={"First Stage"}
+    />,
     <Stage2
       key={pslv.launcher}
       launcher={pslv.launcher}
@@ -66,7 +71,7 @@ const PSLV = () => {
       SpecificImpulse={pslv.SecondStage.SpecificImpulse}
       BurnTime={pslv.SecondStage.BurnTime}
       Propellant={pslv.SecondStage.Propellant}
-      stageName={"Second stage"} 
+      stageName={"Second stage"}
     />,
     <Stage3
       key={pslv.launcher}
@@ -80,7 +85,7 @@ const PSLV = () => {
       SpecificImpulse={pslv.ThirdStage.SpecificImpulse}
       BurnTime={pslv.ThirdStage.BurnTime}
       Propellant={pslv.ThirdStage.Propellant}
-      stageName={"Third stage"} 
+      stageName={"Third stage"}
     />,
     <Stage4
       key={pslv.launcher}
@@ -94,7 +99,7 @@ const PSLV = () => {
       SpecificImpulse={pslv.FourthStage.SpecificImpulse}
       BurnTime={pslv.FourthStage.BurnTime}
       Propellant={pslv.FourthStage.Propellant}
-      stageName={"Fourth Stage"} 
+      stageName={"Fourth Stage"}
     />,
     <PayloadFairing
       key={pslv.launcher}
@@ -107,7 +112,7 @@ const PSLV = () => {
       Material={pslv.PayloadFairing.Material}
       SeparationMechanisms={pslv.PayloadFairing.SeparationMechanisms}
       AcousticProtection={pslv.PayloadFairing.AcousticProtection}
-      stageName={"Payload Fairing"} 
+      stageName={"Payload Fairing"}
     />,
   ];
   return (
@@ -115,6 +120,7 @@ const PSLV = () => {
       <Head>
         <title>Isro - PSLV</title>
       </Head>
+      
       <Hero
         backgroundImage="/Lunchers/PSLVBG3.png"
         title="PSLV"
@@ -122,9 +128,18 @@ const PSLV = () => {
       />
 
       <LaunchStats data={pslv.LaunchStatistics} />
+
       <Hero2 backgroundImage="" info={pslv.desc} />
 
       <ReusableSlider items={items} />
+
+      <VideoHero
+        backgroundImageUrl={"/Lunchers/PSLVBGLAUNCH.png"}
+        title={"Video"}
+        subtitle={"PSLV LAUNCH"}
+        buttonText={"Watch Now"}
+        buttonLink={"https://twitter.com/i/status/1685519623460917248"}
+      />
     </div>
   );
 };

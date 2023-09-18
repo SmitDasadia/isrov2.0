@@ -11,6 +11,7 @@ import Stage3 from "@/components/launchers/Stage3";
 import PayloadFairing from "@/components/launchers/PayloadFairing";
 import ReusableSlider from "@/components/launchers/Silder";
 import { gslv } from "@/lib/data/GSLV";
+import VideoHero from "@/components/VideoHero";
 
 const GSLV = () => {
   const items = [
@@ -106,6 +107,8 @@ const GSLV = () => {
       <Hero2 backgroundImage="" info={gslv.desc} />
 
       <ReusableSlider items={items} />
+
+      <VideoHero backgroundImageUrl={"/Lunchers/GSLVBGLAUNCH.png"} title={"Video"} subtitle={"GSLV LAUNCH"} buttonText={"Watch Now"} buttonLink={"https://twitter.com/i/status/1663051206338531329"}/>
     </div>
   );
 };

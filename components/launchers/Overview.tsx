@@ -48,44 +48,62 @@ const Overview: React.FC<OverviewProps> = ({
 
           <table className="w-full mt-4">
             <tbody>
-              <tr>
-                <td className="font-semibold text-lg p-3">Height</td>
-                <td className="font-semibold text-lg p-3">{Height}</td>
-              </tr>
-              <tr>
-                <td className="font-semibold text-lg p-3">Diameter</td>
-                <td className="font-semibold text-lg p-3">{Diameter}</td>
-              </tr>
-              <tr>
-                <td className="font-semibold text-lg p-3">Mass</td>
-                <td className="font-semibold text-lg p-3">{Mass}</td>
-              </tr>
-              <tr>
-                <td className="font-semibold text-lg p-3">Varients</td>
-                <td className="font-semibold text-lg p-3">{Varients}</td>
-              </tr>
-              <tr>
-                <td className="font-semibold text-lg p-3">Payload to LEO</td>
-                <td className="font-semibold text-lg p-3">{LEO}</td>
-              </tr>
-              <tr>
-                <td className="font-semibold text-lg p-3">Payload to SSO</td>
-                <td className="font-semibold text-lg p-3">{SSO}</td>
-              </tr>
-              <tr>
-                <td className="font-semibold text-lg p-3">
-                  Payload to SUB-GTO
-                </td>
-                <td className="font-semibold text-lg p-3">{SUBGTO}</td>
-              </tr>
-              <tr>
-                <td className="font-semibold text-lg p-3">Payload to GTO</td>
-                <td className="font-semibold text-lg p-3">{GTO}</td>
-              </tr>
-              <tr>
-                <td className="font-semibold text-lg p-3">Stages</td>
-                <td className="font-semibold text-lg p-3">{Stages}</td>
-              </tr>
+              {Height.length > 1 && (
+                <tr>
+                  <td className="font-semibold text-lg p-3">Height</td>
+                  <td className="font-semibold text-lg p-3">{Height}</td>
+                </tr>
+              )}
+              {Diameter.length > 1 && (
+                <tr>
+                  <td className="font-semibold text-lg p-3">Diameter</td>
+                  <td className="font-semibold text-lg p-3">{Diameter}</td>
+                </tr>
+              )}
+              {Mass.length > 1 && (
+                <tr>
+                  <td className="font-semibold text-lg p-3">Mass</td>
+                  <td className="font-semibold text-lg p-3">{Mass}</td>
+                </tr>
+              )}
+              {Varients.length > 1 && (
+                <tr>
+                  <td className="font-semibold text-lg p-3">Variants</td>
+                  <td className="font-semibold text-lg p-3">{Varients}</td>
+                </tr>
+              )}
+              {LEO.length > 1 && (
+                <tr>
+                  <td className="font-semibold text-lg p-3">Payload to LEO</td>
+                  <td className="font-semibold text-lg p-3">{LEO}</td>
+                </tr>
+              )}
+              {SSO.length > 1 && (
+                <tr>
+                  <td className="font-semibold text-lg p-3">Payload to SSO</td>
+                  <td className="font-semibold text-lg p-3">{SSO}</td>
+                </tr>
+              )}
+              {SUBGTO.length > 1 && (
+                <tr>
+                  <td className="font-semibold text-lg p-3">
+                    Payload to SUB-GTO
+                  </td>
+                  <td className="font-semibold text-lg p-3">{SUBGTO}</td>
+                </tr>
+              )}
+              {GTO.length > 1 && (
+                <tr>
+                  <td className="font-semibold text-lg p-3">Payload to GTO</td>
+                  <td className="font-semibold text-lg p-3">{GTO}</td>
+                </tr>
+              )}
+              {Stages > 0 && (
+                <tr>
+                  <td className="font-semibold text-lg p-3">Stages</td>
+                  <td className="font-semibold text-lg p-3">{Stages}</td>
+                </tr>
+              )}
             </tbody>
           </table>
         </motion.div>

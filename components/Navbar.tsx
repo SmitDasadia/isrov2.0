@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
                     href={link.route}
                     key={link.label}
                     onClick={closeMenu}
-                    className={`relative flex justify-end rounded-br-2xl p-2 ${
+                    className={`relative flex justify-end rounded-br-2xl p-1 ${
                       isActive ? " text-white " : "text-white hover:underline"
                     }`}
                   >

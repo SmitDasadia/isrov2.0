@@ -1,8 +1,101 @@
 /* eslint-disable @next/next/no-img-element */
 import Hero from "@/components/launchers/Hero";
+import Hero2 from "@/components/launchers/Hero2";
 import Head from "next/head";
+import { gslv } from "@/lib/data/gslv";
+import Overview from "@/components/launchers/Overview";
+import LaunchStats from "@/components/launchers/LaunchStats";
+import Booster from "@/components/launchers/Booster";
+import Stage1 from "@/components/launchers/Stage1";
+import Stage2 from "@/components/launchers/Stage2";
+import Stage3 from "@/components/launchers/Stage3";
+import PayloadFairing from "@/components/launchers/PayloadFairing";
+import ReusableSlider from "@/components/launchers/Silder";
 
 const GSLV = () => {
+  const items = [
+    <Overview
+      key={gslv.launcher}
+      backgroundImage=""
+      launcher={gslv.launcher}
+      Height={gslv.Height}
+      Diameter={gslv.Diameter}
+      Mass={gslv.Mass}
+      Stages={gslv.Stages}
+      LEO={gslv.Payload.LEO.Mass}
+      SSO={gslv.Payload.SSO.Mass}
+      // SUBGTO={gslv.Payload.SubGTO.Mass}
+      GTO={gslv.Payload.GTO.Mass}
+      Varients={gslv.Variants}
+      SUBGTO={""} // Varients={gslv.Variants}
+    />,
+    <Booster
+      key={gslv.launcher}
+      launcher={gslv.launcher}
+      backgroundImage=""
+      Noboosters={gslv.Boosters.Noboosters}
+      Height={gslv.Boosters.Height}
+      Diameter={gslv.Boosters.Diameter}
+      PropellantMass={gslv.Boosters.PropellantMass}
+      PoweredBy={gslv.Boosters.Noboosters}
+      MaximumThrust={gslv.Boosters.MaximumThrust}
+      TotalThrust={gslv.Boosters.TotalThrust}
+      SpecificImpulse={gslv.Boosters.SpecificImpulse}
+      BurnTime={gslv.Boosters.BurnTime}
+      Propellant={gslv.Boosters.Propellant}
+    />,
+    <Stage1
+      key={gslv.launcher}
+      launcher={gslv.launcher}
+      backgroundImage=""
+      Height={gslv.FirstStage.Height}
+      Diameter={gslv.FirstStage.Diameter}
+      PropellantMass={gslv.FirstStage.PropellantMass}
+      PoweredBy={gslv.FirstStage.PoweredBy}
+      MaximumThrust={gslv.FirstStage.MaximumThrust}
+      SpecificImpulse={gslv.FirstStage.SpecificImpulse}
+      BurnTime={gslv.FirstStage.BurnTime}
+      Propellant={gslv.FirstStage.Propellant}
+    />,
+    <Stage2
+      key={gslv.launcher}
+      launcher={gslv.launcher}
+      backgroundImage=""
+      Height={gslv.SecondStage.Height}
+      Diameter={gslv.SecondStage.Diameter}
+      PropellantMass={gslv.SecondStage.PropellantMass}
+      PoweredBy={gslv.SecondStage.PoweredBy}
+      MaximumThrust={gslv.SecondStage.MaximumThrust}
+      SpecificImpulse={gslv.SecondStage.SpecificImpulse}
+      BurnTime={gslv.SecondStage.BurnTime}
+      Propellant={gslv.SecondStage.Propellant}
+    />,
+    <Stage3
+      key={gslv.launcher}
+      launcher={gslv.launcher}
+      backgroundImage=""
+      Height={gslv.ThirdStage.Height}
+      Diameter={gslv.ThirdStage.Diameter}
+      PropellantMass={gslv.ThirdStage.PropellantMass}
+      PoweredBy={gslv.ThirdStage.PoweredBy}
+      MaximumThrust={gslv.ThirdStage.MaximumThrust}
+      SpecificImpulse={gslv.ThirdStage.SpecificImpulse}
+      BurnTime={gslv.ThirdStage.BurnTime}
+      Propellant={gslv.ThirdStage.Propellant}
+    />,
+    <PayloadFairing
+      key={gslv.launcher}
+      launcher={gslv.launcher}
+      backgroundImage=""
+      Height={gslv.PayloadFairing.Height}
+      Diameter={gslv.PayloadFairing.Diameter}
+      Weight={""}
+      Construction={""}
+      Material={""}
+      SeparationMechanisms={""}
+      AcousticProtection={""}
+    />,
+  ];
   return (
     <div>
       <Head>
@@ -10,9 +103,14 @@ const GSLV = () => {
       </Head>
       <Hero
         backgroundImage="/Lunchers/GSLVBG3.png"
-        title="GSVL"
-        subtitle=""
+        title="GSLV"
+        subtitle="The Orbit Master"
       />
+
+      <LaunchStats data={gslv.LaunchStatistics} />
+      <Hero2 backgroundImage="" info={gslv.desc} />
+
+      <ReusableSlider items={items} />
     </div>
   );
 };

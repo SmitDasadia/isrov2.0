@@ -2,9 +2,7 @@
 import Hero from "@/components/launchers/Hero";
 import Hero2 from "@/components/launchers/Hero2";
 import Head from "next/head";
-import { sslv } from "@/lib/data/sslv";
 import { soundingRockets } from "@/lib/data/soundingRockets";
-import Overview from "@/components/launchers/Overview";
 import OperationalRockets from "@/components/launchers/Rohini/OperationalRockets";
 
 const SSLV = () => {

@@ -41,8 +41,7 @@ const PSLV = () => {
       TotalThrust={pslv.Boosters.TotalThrust}
       SpecificImpulse={pslv.Boosters.SpecificImpulse}
       BurnTime={pslv.Boosters.BurnTime}
-      Propellant={pslv.Boosters.Propellant}
-    />,
+      Propellant={pslv.Boosters.Propellant} stageName={"Boosters (PSLV-XL/QL/DL)"}    />,
     <Stage1
       key={pslv.launcher}
       launcher={pslv.launcher}
@@ -54,7 +53,7 @@ const PSLV = () => {
       MaximumThrust={pslv.FirstStage.MaximumThrust}
       SpecificImpulse={pslv.FirstStage.SpecificImpulse}
       BurnTime={pslv.FirstStage.BurnTime}
-      Propellant={pslv.FirstStage.Propellant} stageName={""}    />,
+      Propellant={pslv.FirstStage.Propellant} stageName={"First Stage"}    />,
     <Stage2
       key={pslv.launcher}
       launcher={pslv.launcher}
@@ -67,7 +66,7 @@ const PSLV = () => {
       SpecificImpulse={pslv.SecondStage.SpecificImpulse}
       BurnTime={pslv.SecondStage.BurnTime}
       Propellant={pslv.SecondStage.Propellant}
-      stageName={""} 
+      stageName={"Second stage"} 
     />,
     <Stage3
       key={pslv.launcher}
@@ -81,7 +80,7 @@ const PSLV = () => {
       SpecificImpulse={pslv.ThirdStage.SpecificImpulse}
       BurnTime={pslv.ThirdStage.BurnTime}
       Propellant={pslv.ThirdStage.Propellant}
-      stageName={""} 
+      stageName={"Third stage"} 
     />,
     <Stage4
       key={pslv.launcher}
@@ -95,7 +94,7 @@ const PSLV = () => {
       SpecificImpulse={pslv.FourthStage.SpecificImpulse}
       BurnTime={pslv.FourthStage.BurnTime}
       Propellant={pslv.FourthStage.Propellant}
-      stageName={""} 
+      stageName={"Fourth Stage"} 
     />,
     <PayloadFairing
       key={pslv.launcher}
@@ -108,7 +107,7 @@ const PSLV = () => {
       Material={pslv.PayloadFairing.Material}
       SeparationMechanisms={pslv.PayloadFairing.SeparationMechanisms}
       AcousticProtection={pslv.PayloadFairing.AcousticProtection}
-      stageName={""} 
+      stageName={"Payload Fairing"} 
     />,
   ];
   return (

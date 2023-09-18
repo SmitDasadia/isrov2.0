@@ -77,9 +77,9 @@ const SSLV = () => {
       PropellantMass={sslv.FourthStage.PropellantMass}
       PoweredBy={sslv.FourthStage.PoweredBy}
       Propellant={sslv.FourthStage.Propellant}
-      stageName={""}
+      stageName={"Fourth Stage – Velocity Trimming Module (VTM)"}
       Height={""}
-      MaximumThrust={"Fourth Stage – Velocity Trimming Module (VTM)"}
+      MaximumThrust={""}
       BurnTime={""}
       SpecificImpulse={[]}
     />,

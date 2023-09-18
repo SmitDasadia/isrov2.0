@@ -2,7 +2,6 @@
 import Hero from "@/components/launchers/Hero";
 import Hero2 from "@/components/launchers/Hero2";
 import Head from "next/head";
-import { gslv } from "@/lib/data/gslv";
 import Overview from "@/components/launchers/Overview";
 import LaunchStats from "@/components/launchers/LaunchStats";
 import Booster from "@/components/launchers/Booster";
@@ -11,6 +10,7 @@ import Stage2 from "@/components/launchers/Stage2";
 import Stage3 from "@/components/launchers/Stage3";
 import PayloadFairing from "@/components/launchers/PayloadFairing";
 import ReusableSlider from "@/components/launchers/Silder";
+import { gslv } from "@/lib/data/GSLV";
 
 const GSLV = () => {
   const items = [
@@ -42,8 +42,7 @@ const GSLV = () => {
       TotalThrust={gslv.Boosters.TotalThrust}
       SpecificImpulse={gslv.Boosters.SpecificImpulse}
       BurnTime={gslv.Boosters.BurnTime}
-      Propellant={gslv.Boosters.Propellant}
-    />,
+      Propellant={gslv.Boosters.Propellant} stageName={"Boosters"}    />,
     <Stage1
       key={gslv.launcher}
       launcher={gslv.launcher}
@@ -55,8 +54,7 @@ const GSLV = () => {
       MaximumThrust={gslv.FirstStage.MaximumThrust}
       SpecificImpulse={gslv.FirstStage.SpecificImpulse}
       BurnTime={gslv.FirstStage.BurnTime}
-      Propellant={gslv.FirstStage.Propellant}
-    />,
+      Propellant={gslv.FirstStage.Propellant} stageName={"First Stage"}    />,
     <Stage2
       key={gslv.launcher}
       launcher={gslv.launcher}
@@ -68,8 +66,7 @@ const GSLV = () => {
       MaximumThrust={gslv.SecondStage.MaximumThrust}
       SpecificImpulse={gslv.SecondStage.SpecificImpulse}
       BurnTime={gslv.SecondStage.BurnTime}
-      Propellant={gslv.SecondStage.Propellant}
-    />,
+      Propellant={gslv.SecondStage.Propellant} stageName={"Second Stage"}    />,
     <Stage3
       key={gslv.launcher}
       launcher={gslv.launcher}
@@ -81,8 +78,7 @@ const GSLV = () => {
       MaximumThrust={gslv.ThirdStage.MaximumThrust}
       SpecificImpulse={gslv.ThirdStage.SpecificImpulse}
       BurnTime={gslv.ThirdStage.BurnTime}
-      Propellant={gslv.ThirdStage.Propellant}
-    />,
+      Propellant={gslv.ThirdStage.Propellant} stageName={"Third Stage"}    />,
     <PayloadFairing
       key={gslv.launcher}
       launcher={gslv.launcher}
@@ -93,8 +89,7 @@ const GSLV = () => {
       Construction={""}
       Material={""}
       SeparationMechanisms={""}
-      AcousticProtection={""}
-    />,
+      AcousticProtection={""} stageName={"Paload Fairing"}    />,
   ];
   return (
     <div>

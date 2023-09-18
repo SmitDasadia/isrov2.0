@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
 interface BoosterProps {
+  stageName: string;
   backgroundImage: string;
   launcher: string;
   Noboosters: string;
@@ -28,6 +29,7 @@ const Booster: React.FC<BoosterProps> = ({
   SpecificImpulse,
   BurnTime,
   Propellant,
+  stageName
 }) => {
   return (
     <motion.section
@@ -44,7 +46,7 @@ const Booster: React.FC<BoosterProps> = ({
           className="text-white p-10 w-full lg:w-2/3"
         >
           <h2 className="text-2xl font-semibold text-slate-300">{launcher}</h2>
-          <h2 className="text-3xl font-bold sm:text-4xl">Boosters</h2>
+          <h2 className="text-3xl font-bold sm:text-4xl">{stageName}</h2>
 
           <table className="w-full mt-4">
             <tbody>

@@ -19,7 +19,7 @@ const Chandrayaan3 = () => {
   return (
     <div>
       <Head>
-        <title>Isro - NVS-01</title>
+        <title>Isro - Chandrayaan-3</title>
       </Head>
       <Hero
         title={title}

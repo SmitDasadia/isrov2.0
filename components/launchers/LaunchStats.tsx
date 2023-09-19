@@ -18,7 +18,7 @@ const LaunchStats: React.FC<LaunchStatsProps> = ({ data }) => {
       transition={{ duration: 0.5 }}
       className=" p-4 "
     >
-      <section className="text-white body-font">
+      <section className="text-white body-font flex justify-center items-center">
         <div className="container p-5 pt-5">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
             <div className="p-4">

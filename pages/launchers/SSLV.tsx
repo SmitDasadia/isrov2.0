@@ -99,7 +99,7 @@ const SSLV = () => {
       />
 
       <LaunchStats data={sslv.LaunchStatistics} />
-      <Hero2 backgroundImage="" info={sslv.desc} />
+      <Hero2  info={sslv.desc} />
 
       <ReusableSlider items={items} />
       <VideoHero

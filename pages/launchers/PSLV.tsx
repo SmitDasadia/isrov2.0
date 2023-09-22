@@ -131,7 +131,7 @@ const PSLV = () => {
 
       <LaunchStats data={pslv.LaunchStatistics} />
 
-      <Hero2 backgroundImage="" info={pslv.desc} />
+      <Hero2  info={pslv.desc} />
 
       <ReusableSlider items={items} />
 

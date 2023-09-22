@@ -106,7 +106,7 @@ const GSLV = () => {
       />
 
       <LaunchStats data={gslv.LaunchStatistics} />
-      <Hero2 backgroundImage="" info={gslv.desc} />
+      <Hero2  info={gslv.desc} />
 
       <ReusableSlider items={items} />
 

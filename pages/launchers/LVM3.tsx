@@ -86,7 +86,7 @@ const LVM3 = () => {
       />
 
       <LaunchStats data={lvm3.LaunchStatistics} />
-      <Hero2 backgroundImage="" info={lvm3.desc} />
+      <Hero2  info={lvm3.desc} />
 
       <ReusableSlider items={items} />
       <VideoHero backgroundImageUrl={"/Lunchers/LVM3LAUNCH.png"} title={"Video"} subtitle={"LVM3 LAUNCH"} buttonText={"Watch Now"} buttonLink={"https://www.isro.gov.in/LVM3_M2_Liftoff_cameraview.html"}/>

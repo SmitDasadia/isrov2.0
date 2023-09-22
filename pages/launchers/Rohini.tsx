@@ -11,11 +11,10 @@ const SSLV = () => {
       <Head>
         <title>Isro - Rohini(Sounding Rockets)</title>
         <link rel="icon" href="/Isro.png" sizes="any" />
-
       </Head>
       <Hero backgroundImage="/Lunchers/SR.png" title="Rohini" subtitle="" />
 
-      <Hero2 backgroundImage="" info={soundingRockets.description} />
+      <Hero2 info={soundingRockets.description} />
 
       <OperationalRockets
         operationalRockets={soundingRockets.operationalRockets}

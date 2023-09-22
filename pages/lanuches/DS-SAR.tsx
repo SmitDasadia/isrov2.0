@@ -18,6 +18,8 @@ const DSSAR = () => {
     <div>
       <Head>
         <title>Isro - DS-SAR</title>
+        <link rel="icon" href="/Isro.png" sizes="any" />
+        
       </Head>
       <Hero
         title={title}

@@ -76,6 +76,8 @@ const LVM3 = () => {
     <div>
       <Head>
         <title>Isro - LVM3</title>
+        <link rel="icon" href="/Isro.png" sizes="any" />
+
       </Head>
       <Hero
         backgroundImage="/Lunchers/LVM3BG2.png"

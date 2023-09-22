@@ -10,6 +10,8 @@ const Lunches = () => {
     <div>
       <Head>
         <title>Isro - Launches</title>
+        <link rel="icon" href="/Isro.png" sizes="any" />
+
       </Head>
       <Hero backgroundImage="lunches/lunches.jpg" title="Launches" />
 

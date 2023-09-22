@@ -89,6 +89,8 @@ const SSLV = () => {
     <div>
       <Head>
         <title>Isro - SSLV</title>
+        <link rel="icon" href="/Isro.png" sizes="any" />
+
       </Head>
       <Hero
         backgroundImage="/Lunchers/SSLVBG2.png"

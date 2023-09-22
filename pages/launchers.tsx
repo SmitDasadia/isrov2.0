@@ -9,6 +9,8 @@ const Launchers = () => {
     <div>
       <Head>
         <title>Isro - Launchers</title>
+        <link rel="icon" href="/Isro.png" sizes="any" />
+
       </Head>
       <Hero backgroundImage="/Lunchers/lunchers.png" title="Launchers" />
 

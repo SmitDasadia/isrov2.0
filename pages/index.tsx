@@ -13,6 +13,7 @@ export default function Home() {
     >
       <Head>
         <title>Isro</title>
+        <link rel="icon" href="/Isro.png" sizes="any" />
       </Head>
       <ReusableHeroSection
         backgroundImageUrl="https://www.isro.gov.in/media_isro/image/index/PSLVC55/PSLVC55_gallery/post_launch/SB3_8531.jpg.webp"

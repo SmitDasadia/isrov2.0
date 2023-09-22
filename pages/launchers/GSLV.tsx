@@ -96,6 +96,8 @@ const GSLV = () => {
     <div>
       <Head>
         <title>Isro - GSLV</title>
+        <link rel="icon" href="/Isro.png" sizes="any" />
+
       </Head>
       <Hero
         backgroundImage="/Lunchers/GSLVBG3.png"

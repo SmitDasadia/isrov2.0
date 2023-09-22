@@ -119,6 +119,8 @@ const PSLV = () => {
     <div>
       <Head>
         <title>Isro - PSLV</title>
+        <link rel="icon" href="/Isro.png" sizes="any" />
+
       </Head>
       
       <Hero

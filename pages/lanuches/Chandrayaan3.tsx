@@ -20,6 +20,8 @@ const Chandrayaan3 = () => {
     <div>
       <Head>
         <title>Isro - Chandrayaan-3</title>
+        <link rel="icon" href="/Isro.png" sizes="any" />
+
       </Head>
       <Hero
         title={title}

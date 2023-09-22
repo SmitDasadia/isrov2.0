@@ -10,6 +10,8 @@ const SSLV = () => {
     <div>
       <Head>
         <title>Isro - Rohini(Sounding Rockets)</title>
+        <link rel="icon" href="/Isro.png" sizes="any" />
+
       </Head>
       <Hero backgroundImage="/Lunchers/SR.png" title="Rohini" subtitle="" />
 

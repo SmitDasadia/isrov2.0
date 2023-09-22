@@ -27,7 +27,7 @@ const Hero: React.FC<HeroProps> = ({ backgroundImage, title, subtitle }) => {
         alt="Background"
         layout="fill"
         objectFit="cover"
-        quality={100} // Adjust image quality as needed
+       
       />
 
       {/* Overlay */}

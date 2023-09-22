@@ -2,6 +2,7 @@
 import React, { FC } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface VideoHeroProps {
   backgroundImageUrl: string;
@@ -27,9 +28,16 @@ const VideoHero: FC<VideoHeroProps> = ({
     <motion.section
       className="relative h-screen flex bg-center bg-cover"
       style={{
-        backgroundImage: `url('${backgroundImageUrl}')`,
+        position: "relative", // Ensure relative positioning for absolute child
       }}
     >
+      <Image
+        src={backgroundImageUrl}
+        alt="Background"
+        layout="fill"
+        objectFit="cover"
+       
+      />
       <div className="absolute inset-0 bg-black opacity-40"></div>
       <div className="container mx-auto h-full relative z-10 flex items-end p-4">
         <motion.div

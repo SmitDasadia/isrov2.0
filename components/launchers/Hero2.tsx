@@ -16,9 +16,18 @@ const Hero2: React.FC<HeroProps> = ({ backgroundImage, info }) => {
     <motion.section
       className="min-h-screen flex flex-col justify-center items-left bg-center bg-cover bg-opacity-100"
       style={{
-        backgroundImage: `url('${backgroundImage}')`,
+        position: "relative", // Ensure relative positioning for absolute child
       }}
     >
+      {/* Background Image */}
+      <Image
+        src={backgroundImage}
+        alt="Background"
+        layout="fill"
+        objectFit="cover"
+        quality={100} // Adjust image quality as needed
+      />
+
       <div className="absolute inset-0 bg-black opacity-40"></div>
 
       <motion.div

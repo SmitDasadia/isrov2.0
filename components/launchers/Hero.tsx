@@ -13,22 +13,33 @@ const Hero: React.FC<HeroProps> = ({ backgroundImage, title, subtitle }) => {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 1, delay: 0.5 } },
   };
+
   return (
     <motion.section
       className="relative h-screen flex bg-center bg-cover"
       style={{
-        backgroundImage: `url('${backgroundImage}')`,
+        position: "relative", // Ensure relative positioning for absolute child
       }}
     >
+      {/* Background Image */}
+      <Image
+        src={backgroundImage}
+        alt="Background"
+        layout="fill"
+        objectFit="cover"
+        quality={100} // Adjust image quality as needed
+      />
+
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-40"></div>
-      
+
+      {/* Content */}
       <motion.div
-        className="container mx-auto flex justify-center  items-center h-full relative z-10 pb-10"
+        className="container mx-auto flex justify-center items-center h-full relative z-10 pb-10"
         initial="hidden"
         animate="visible"
         variants={fadeInVariants}
       >
-        
         <div className="p-5">
           <h2 className="text-6xl sm:text-9xl md:text-9xl text-white pb-2 font-extrabold text-center">
             {title}

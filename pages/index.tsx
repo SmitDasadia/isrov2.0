@@ -15,21 +15,21 @@ export default function Home() {
         <title>Isro</title>
       </Head>
       <ReusableHeroSection
-        backgroundImageUrl="/AdityaL1/Aditya_L1Lunch1.jpg"
+        backgroundImageUrl="https://www.isro.gov.in/media_isro/image/index/PSLVC55/PSLVC55_gallery/post_launch/SB3_8531.jpg.webp"
         title="Recent Launch"
         subtitle="ADITYA-L1"
         buttonText="More Info"
         buttonLink="/lanuches/Adityal1"
       />
         <ReusableHeroSection
-        backgroundImageUrl="/DS-SAR/DS-SARBG3.png"
+        backgroundImageUrl="/DS-SAR/DS-SARBG4.png"
         title="Launch Compelted"
         subtitle="DS-SAR"
         buttonText="More Info"
         buttonLink="/lanuches/DS-SAR"
       />
       <ReusableHeroSection
-        backgroundImageUrl="/Chandrayaan3/chandrayann3lunch2.png"
+        backgroundImageUrl="/Chandrayaan3/chandrayann3Lunch4.png"
         title="Launch Compelted"
         subtitle="Chandrayaan-3"
         buttonText="More Info"

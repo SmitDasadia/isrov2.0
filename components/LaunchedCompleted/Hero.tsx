@@ -33,7 +33,6 @@ const Hero: FC<HeroProps> = ({
         alt="Background"
         layout="fill"
         objectFit="cover"
-        
       />
       <div className="absolute inset-0 bg-black opacity-40"></div>
       <motion.div

@@ -25,6 +25,7 @@ const PayloadFairing: React.FC<Stage2Props> = ({
   Weight,
   stageName
 }) => {
+  const isRightAligned = "right";
   return (
     <motion.section
       className="min-h-screen text-white bg-center bg-cover"

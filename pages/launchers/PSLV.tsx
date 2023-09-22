@@ -17,7 +17,7 @@ const PSLV = () => {
   const items = [
     <Overview
       key={pslv.launcher}
-      backgroundImage=""
+      backgroundImage="/Lunchers/PSLVBG3.png"
       launcher={pslv.launcher}
       Height={pslv.Height}
       Diameter={pslv.Diameter}
@@ -32,12 +32,12 @@ const PSLV = () => {
     <Booster
       key={pslv.launcher}
       launcher={pslv.launcher}
-      backgroundImage=""
+      backgroundImage="/Lunchers/pslvbooster.png"
       Noboosters={pslv.Boosters.Noboosters}
       Height={pslv.Boosters.Height}
       Diameter={pslv.Boosters.Diameter}
       PropellantMass={pslv.Boosters.PropellantMass}
-      PoweredBy={pslv.Boosters.Noboosters}
+      PoweredBy={pslv.Boosters.PoweredBy}
       MaximumThrust={pslv.Boosters.MaximumThrust}
       TotalThrust={pslv.Boosters.TotalThrust}
       SpecificImpulse={pslv.Boosters.SpecificImpulse}
@@ -48,7 +48,7 @@ const PSLV = () => {
     <Stage1
       key={pslv.launcher}
       launcher={pslv.launcher}
-      backgroundImage=""
+      backgroundImage="/Lunchers/pslvstage1.jpg"
       Height={pslv.FirstStage.Height}
       Diameter={pslv.FirstStage.Diameter}
       PropellantMass={pslv.FirstStage.PropellantMass}
@@ -62,7 +62,7 @@ const PSLV = () => {
     <Stage2
       key={pslv.launcher}
       launcher={pslv.launcher}
-      backgroundImage=""
+      backgroundImage="/Lunchers/pslvstage2.jpg"
       Height={pslv.SecondStage.Height}
       Diameter={pslv.SecondStage.Diameter}
       PropellantMass={pslv.SecondStage.PropellantMass}
@@ -76,7 +76,7 @@ const PSLV = () => {
     <Stage3
       key={pslv.launcher}
       launcher={pslv.launcher}
-      backgroundImage=""
+      backgroundImage="/Lunchers/pslvstage3.jpg"
       Height={pslv.ThirdStage.Height}
       Diameter={pslv.ThirdStage.Diameter}
       PropellantMass={pslv.ThirdStage.PropellantMass}
@@ -90,7 +90,7 @@ const PSLV = () => {
     <Stage4
       key={pslv.launcher}
       launcher={pslv.launcher}
-      backgroundImage=""
+      backgroundImage="/Lunchers/pslvstage4.png"
       Height={pslv.FourthStage.Height}
       Diameter={pslv.FourthStage.Diameter}
       PropellantMass={pslv.FourthStage.PropellantMass}
@@ -104,7 +104,7 @@ const PSLV = () => {
     <PayloadFairing
       key={pslv.launcher}
       launcher={pslv.launcher}
-      backgroundImage=""
+      backgroundImage="/Lunchers/pslvpayloadfairing.jpg"
       Height={pslv.PayloadFairing.Height}
       Diameter={pslv.PayloadFairing.Diameter}
       Weight={pslv.PayloadFairing.Weight}

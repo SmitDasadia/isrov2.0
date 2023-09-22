@@ -12,7 +12,7 @@ const Launchers = () => {
         <link rel="icon" href="/Isro.png" sizes="any" />
 
       </Head>
-      <Hero backgroundImage="/Lunchers/lunchers.png" title="Launchers" />
+      <Hero backgroundImage="/Lunchers/lunchers.png" title="Launchers" subtitle={""} />
 
       <div className="pt-5 p-5">
         {Object.values(lunchers.operational).map((vehicle,index) => (

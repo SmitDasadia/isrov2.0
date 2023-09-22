@@ -2,12 +2,13 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 interface LaunchVehiclesProps {
   name: string;
   description: string;
   img: string;
-  path: string
+  path: string;
   alignment: "left" | "center" | "right";
 }
 
@@ -16,7 +17,7 @@ const LaunchVehicles: React.FC<LaunchVehiclesProps> = ({
   description,
   alignment,
   img,
-  path
+  path,
 }) => {
   const isRightAligned = alignment === "right";
 
@@ -42,6 +43,19 @@ const LaunchVehicles: React.FC<LaunchVehiclesProps> = ({
                   : "lg:flex-row text-left"
               }`}
             >
+              {/* On small devices, show image first */}
+              <div className="w-full lg:w-1/2 p-2 flex justify-center items-center">
+                <Image
+                  src={img}
+                  alt={name}
+                  width={600} // Set the width according to your design
+                  height={400} // Set the height according to your design
+                  layout="responsive"
+                  objectFit="cover"
+                />
+              </div>
+
+              {/* On small devices, show data second */}
               <div className="w-full lg:w-1/2 p-2">
                 <h2 className="text-2xl lg:text-4xl font-bold m-2 p-2">
                   {name}
@@ -49,26 +63,13 @@ const LaunchVehicles: React.FC<LaunchVehiclesProps> = ({
                 <p className="m-2 p-2 text-lg">{description}</p>
 
                 <div className="m-2 p-2 space-x-2 flex justify-center items-center sm:justify-start sm:items-start">
-                  <Link href={path} >
-                    <button
-                      
-                      className="relative overflow-hidden py-4 px-6 border-2 font-bold text-md group text-white bg-transparent hover:text-black cursor-pointer"
-                    >
+                  <Link href={path}>
+                    <button className="relative overflow-hidden py-4 px-6 border-2 font-bold text-md group text-white bg-transparent hover:text-black cursor-pointer">
                       <span className="relative z-10">Learn More</span>
                       <div className="absolute inset-0 bg-white transform scale-y-0 origin-bottom transition-transform duration-300 group-hover:scale-y-100"></div>
                     </button>
                   </Link>
-
-                 
                 </div>
-              </div>
-              <div className="w-full lg:w-1/2 p-2 flex justify-center items-center">
-                <img
-                  src={img}
-                  alt={name}
-                  className="w-full "
-                 
-                />
               </div>
             </div>
           </motion.div>

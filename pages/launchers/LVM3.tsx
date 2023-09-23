@@ -14,7 +14,7 @@ const LVM3 = () => {
   const items = [
     <Overview
       key={lvm3.launcher}
-      backgroundImage=""
+      backgroundImage="/Lunchers/lvm3overview.png"
       launcher={lvm3.launcher}
       Height={lvm3.Size.Height}
       Diameter={lvm3.Size.Diameter}
@@ -28,7 +28,7 @@ const LVM3 = () => {
     />,
     <Stage1
       key={lvm3.launcher}
-      backgroundImage={""}
+      backgroundImage={"/Lunchers/lvm3stage1.png"}
       launcher={lvm3.launcher}
       stageName={"First Stage – S200 Boosters"}
       Height={lvm3.FirstStage.S200Boosters.Height}
@@ -42,7 +42,7 @@ const LVM3 = () => {
     />,
     <Stage2
       key={lvm3.launcher}
-      backgroundImage={""}
+      backgroundImage={"/Lunchers/lvm3stage2.png"}
       launcher={lvm3.launcher}
       stageName={"Second Stage – L110"}
       Height={lvm3.SecondStage.L110.Height}
@@ -57,7 +57,7 @@ const LVM3 = () => {
       GrossMass={""}
     />,<Stage3
       key={lvm3.launcher}
-      backgroundImage={""}
+      backgroundImage={"/Lunchers/lvm3stage3.png"}
       launcher={lvm3.launcher}
       stageName={"Third Stage – C25"}
       Height={lvm3.SecondStage.L110.Height}

@@ -12,7 +12,7 @@ export default function Home() {
     <main
     >
       <Head>
-        <title>Isro</title>
+        <title>Indian Space Research Organisation</title>
         <link rel="icon" href="/Isro.png" sizes="any" />
       </Head>
       <ReusableHeroSection

@@ -17,7 +17,7 @@ const GSLV = () => {
   const items = [
     <Overview
       key={gslv.launcher}
-      backgroundImage=""
+      backgroundImage="/Lunchers/gslvoverview.png"
       launcher={gslv.launcher}
       Height={gslv.Height}
       Diameter={gslv.Diameter}
@@ -33,7 +33,7 @@ const GSLV = () => {
     <Booster
       key={gslv.launcher}
       launcher={gslv.launcher}
-      backgroundImage=""
+      backgroundImage="/Lunchers/gslvbooster.png"
       Noboosters={gslv.Boosters.Noboosters}
       Height={gslv.Boosters.Height}
       Diameter={gslv.Boosters.Diameter}
@@ -47,7 +47,7 @@ const GSLV = () => {
     <Stage1
       key={gslv.launcher}
       launcher={gslv.launcher}
-      backgroundImage=""
+      backgroundImage="/Lunchers/gslvstage1.png"
       Height={gslv.FirstStage.Height}
       Diameter={gslv.FirstStage.Diameter}
       PropellantMass={gslv.FirstStage.PropellantMass}
@@ -59,7 +59,7 @@ const GSLV = () => {
     <Stage2
       key={gslv.launcher}
       launcher={gslv.launcher}
-      backgroundImage=""
+      backgroundImage="/Lunchers/gslvstage2.jpg"
       Height={gslv.SecondStage.Height}
       Diameter={gslv.SecondStage.Diameter}
       PropellantMass={gslv.SecondStage.PropellantMass}
@@ -71,7 +71,7 @@ const GSLV = () => {
     <Stage3
       key={gslv.launcher}
       launcher={gslv.launcher}
-      backgroundImage=""
+      backgroundImage="/Lunchers/gslvstage3.png"
       Height={gslv.ThirdStage.Height}
       Diameter={gslv.ThirdStage.Diameter}
       PropellantMass={gslv.ThirdStage.PropellantMass}
@@ -83,7 +83,7 @@ const GSLV = () => {
     <PayloadFairing
       key={gslv.launcher}
       launcher={gslv.launcher}
-      backgroundImage=""
+      backgroundImage="/Lunchers/gslvpayloadfairing.jpg"
       Height={gslv.PayloadFairing.Height}
       Diameter={gslv.PayloadFairing.Diameter}
       Weight={""}

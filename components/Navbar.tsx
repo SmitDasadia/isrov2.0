@@ -3,7 +3,7 @@
 import React, { useRef, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { CgClose } from "react-icons/cg";
+import { CgClose, CgMenuRightAlt } from "react-icons/cg";
 import { sidebarLinks } from "@/constants/index";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -42,26 +42,28 @@ const Navbar: React.FC = () => {
         </Link>
       </div>
       <button onClick={toggleSidebar} className="absolute top-7 right-7 ">
-        <div className="w-6 h-[2.5px] bg-white mb-1   "></div>
-        <div className="w-6 h-[2.5px] bg-white mb-1   "></div>
-        <div className="w-6 h-[2.5px] bg-white mb-1   "></div>
+        <CgMenuRightAlt size={28} className="text-white" />
       </button>
       <AnimatePresence>
         {isSidebarVisible && (
           <motion.section
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ type: "spring", stiffness: 500, damping: 30 }}
-            className={`flex-col justify-between gap-12 h-screen overflow-auto sidebar fixed top-0 right-0 bg-[#030303] p-10 transform-all z-50 w-2/3 sm:w-1/4`}
+            initial={{ opacity: 0, x: "100%" }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: "100%" }}
+            transition={{
+              type: "spring",
+              stiffness: 400,
+              damping: 25,
+            }}
+            className={`flex-col justify-between gap-12 h-screen overflow-auto sidebar fixed top-0 right-0 bg-[#030303] p-4 sm:p-10 transform-all transition-width duration-100 z-50 w-2/3 sm:w-2/3 lg:w-1/3 xl:w-1/4`}
           >
             <span
               onClick={toggleSidebar}
-              className="absolute top-7 right-7 cursor-pointer text-2xl "
+              className="absolute top-6 right-6 cursor-pointer text-xl sm:text-2xl text-white"
             >
-              <CgClose size={30} className="text-white" />
+              <CgClose size={28} className="text-white" />
             </span>
-            <nav className="flex w-full flex-1 flex-col gap-6 pt-20 p-15">
+            <nav className="flex w-full flex-1 flex-col gap-4 sm:gap-6 pt-8 sm:pt-20 p-4 sm:p-15">
               {sidebarLinks.map((link) => {
                 const isActive =
                   (pathname.includes(link.route) && link.route.length > 1) ||
@@ -72,13 +74,12 @@ const Navbar: React.FC = () => {
                     href={link.route}
                     key={link.label}
                     onClick={closeMenu}
-                    className={`relative flex justify-end rounded-br-2xl p-1 ${
-                      isActive ? " text-white " : "text-white hover:underline"
+                    className={`relative flex items-center p-2 sm:p-1 rounded-lg sidebar-link ${
+                      isActive ? "text-white font-bold" : "text-white"
                     }`}
                   >
-                    <div className="flex items-center gap-1 font-bold">
-                      <div className="font-bold text-lg">{link.label}</div>
-                    </div>
+                    <div className="text-lg sm:text-xl">{link.label}</div>
+                    <div className="link-underline"></div>
                   </Link>
                 );
               })}

@@ -6,25 +6,26 @@ interface HeroProps {
   info: string;
 }
 
-const Hero2: React.FC<HeroProps> = ({  info }) => {
+const Hero2: React.FC<HeroProps> = ({ info }) => {
   const fadeInVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 1, delay: 0.5 } },
   };
+
   return (
     <motion.section
-      className="min-h-screen flex flex-col justify-center items-left bg-center bg-cover bg-opacity-100"
-      style={{
-        position: "relative", // Ensure relative positioning for absolute child
-      }}
+      className="min-h-screen flex flex-col justify-center items-center relative"
+      
     >
       <motion.div
-        className="container mx-auto p-10 sm:p-52"
+        className="container mx-auto p-4 sm:p-10 md:p-10 text-center"
         initial="hidden"
         animate="visible"
         variants={fadeInVariants}
       >
-        <h2 className="text-xl text-white font-semibold">{info}</h2>
+        <h2 className="text-xl sm:text-3xl md:text-2xl text-white font-semibold">
+          {info}
+        </h2>
       </motion.div>
     </motion.section>
   );

@@ -1,20 +1,24 @@
 "use client";
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import Head from 'next/head'
-import ReusableHeroSection from '@/components/Hero'
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import Head from "next/head";
+import ReusableHeroSection from "@/components/Hero";
+import Mainhero from "@/components/Mainhero";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-
-    <main
-    >
+    <main>
       <Head>
         <title>Indian Space Research Organisation</title>
         <link rel="icon" href="/Isro.png" sizes="any" />
       </Head>
+      <Mainhero
+        backgroundImageUrl="/lunches/bg2.png"
+        title="Space Tech Serving Humanity"
+      />
+
       <ReusableHeroSection
         backgroundImageUrl="https://www.isro.gov.in/media_isro/image/index/PSLVC55/PSLVC55_gallery/post_launch/SB3_8531.jpg.webp"
         title="Recent Launch"
@@ -22,7 +26,7 @@ export default function Home() {
         buttonText="More Info"
         buttonLink="/lanuches/Adityal1"
       />
-        <ReusableHeroSection
+      <ReusableHeroSection
         backgroundImageUrl="/DS-SAR/DS-SARBG4.png"
         title="Launch Compelted"
         subtitle="DS-SAR"
@@ -37,5 +41,5 @@ export default function Home() {
         buttonLink="/lanuches/Chandrayaan3"
       />
     </main>
-  )
+  );
 }

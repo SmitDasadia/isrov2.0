@@ -1,22 +1,15 @@
 // ReusableHeroSection.tsx
 import React, { FC, useEffect, useState } from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
-interface ReusableHeroSectionProps {
+interface MainheroProps {
   backgroundImageUrl: string;
   title: string;
-  subtitle: string;
-  buttonText: string;
-  buttonLink: string;
 }
 
-const ReusableHeroSection: FC<ReusableHeroSectionProps> = ({
+const Mainhero: FC<MainheroProps> = ({
   backgroundImageUrl,
   title,
-  subtitle,
-  buttonText,
-  buttonLink,
 }) => {
   const fadeInVariants = {
     hidden: { opacity: 0 },
@@ -41,32 +34,24 @@ const ReusableHeroSection: FC<ReusableHeroSectionProps> = ({
 
   return (
     <motion.section
-      className="relative h-screen flex bg-center bg-cover"
+      className="flex justify-center items-center h-screen bg-center bg-cover"
       style={sectionStyle}
     >
       <div className="absolute inset-0 bg-black opacity-10"></div>
       <motion.div
-        className="container mx-auto flex flex-col justify-end h-full relative z-10 pb-10"
+        className="container mx-auto flex flex-col justify-center h-full relative z-10 pb-10 text-center"
         initial="hidden"
-        animate={isMounted ? "visible" : "hidden"} // Trigger animation when isMounted is true
+        animate={isMounted ? "visible" : "hidden"}
         variants={fadeInVariants}
       >
         <div className="mb-8 ml-8">
-          <h2 className="text-lg sm:text-xl md:text-2xl text-white pb-2">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl text-white font-extrabold">
             {title}
           </h2>
-          <p className="text-4xl sm:text-5xl md:text-6xl text-white font-extrabold">
-            {subtitle}
-          </p>
         </div>
-        <Link href={buttonLink}>
-          <button className="self-start ml-8 mb-16 border hover:bg-white hover:text-black text-white py-4 px-16 text-lg font-semibold transition duration-300">
-            {buttonText}
-          </button>
-        </Link>
       </motion.div>
     </motion.section>
   );
 };
 
-export default ReusableHeroSection;
+export default Mainhero;

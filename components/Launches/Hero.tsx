@@ -41,7 +41,7 @@ const Hero: React.FC<HeroProps> = ({ backgroundImage, title, subtitle }) => {
         variants={fadeInVariants}
       >
         <div className="p-5">
-          <h2 className="text-6xl sm:text-9xl md:text-9xl text-white pb-2 font-extrabold text-center">
+          <h2 className="text-6xl sm:text-6xl md:text-6xl text-white pb-2 font-extrabold text-center">
             {title}
           </h2>
           <h2 className="text-2xl text-center text-white pb-2 font-semibold">

@@ -27,6 +27,11 @@ export const sidebarLinks = [
   },
   {
 
+    route: "/mission",
+    label: "Mission",
+  },
+  {
+
     route: "/launches",
     label: "Launches",
   },

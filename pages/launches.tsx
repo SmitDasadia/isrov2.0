@@ -14,7 +14,7 @@ const Lunches = () => {
         <link rel="icon" href="/Isro.png" sizes="any" />
       </Head>
       <Hero
-        backgroundImage="/lunches/bg1.png"
+        backgroundImage="/lunches/bg2.png"
         title="Launches"
         subtitle={""}
       />

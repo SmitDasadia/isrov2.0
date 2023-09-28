@@ -24,7 +24,7 @@ export default function Home() {
         title="Recent Launch"
         subtitle="ADITYA-L1"
         buttonText="More Info"
-        buttonLink="/lanuches/Adityal1"
+        buttonLink="/public/LaunchCompleted/Aditya_L1Lunch1.jpg"
       />
       <ReusableHeroSection
         backgroundImageUrl="/DS-SAR/DS-SARBG4.png"

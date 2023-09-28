@@ -14,7 +14,7 @@ const Lunches = () => {
         <link rel="icon" href="/Isro.png" sizes="any" />
       </Head>
       <Hero
-        backgroundImage="/lunches/bg2.png"
+        backgroundImage="/lunches/bg4.png"
         title="Launches"
         subtitle={""}
       />
@@ -30,7 +30,7 @@ const Lunches = () => {
                     alt={launch.title}
                     width={600}
                     height={400} 
-                    className="mt-4 h w-full sm:h-2/3"
+                    className="mt-4 h-72 w-full "
                   />
                 </div>
                 <div className="text-white p-2 pt-5">
@@ -39,9 +39,9 @@ const Lunches = () => {
                   </h1>
                   <h2 className="text-3xl font-bold">{launch.title}</h2>
                 </div>
-                <div className="pt-5 ml-2 flex justify-center items-center sm:justify-start sm:items-start">
+                <div className="pt-5 ml-2 flex justify-center items-center sm:justify-start sm:items-start ">
                   <Link href={launch.path}>
-                    <button className="border hover:bg-white hover:text-black text-white py-4 px-16 text-lg font-semibold transition duration-300">
+                    <button className="border hover:bg-white hover:text-black text-white py-4 px-16 text-lg font-semibold transition duration-300 ">
                       More Info
                     </button>
                   </Link>

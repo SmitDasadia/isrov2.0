@@ -22,15 +22,17 @@ const DSSAR = () => {
         
       </Head>
       <Hero
-        title={title}
-        subtitle={subtitle}
-        backgroundImage={backgroundImage}
-        videoLink={videoLink}
+       title={title}
+       subtitle={"Launch Completed"}
+       backgroundImage={backgroundImage}
+       
       />
       <Info
         title={title}
         description={description}
         moreInfoLink={moreInfoLink}
+        videoLink={videoLink}
+        subtitle={subtitle}
       />
     </div>
   );

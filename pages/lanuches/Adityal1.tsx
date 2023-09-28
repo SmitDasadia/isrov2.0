@@ -21,18 +21,18 @@ const Chandrayaan3 = () => {
       <Head>
         <title>Isro - Aditya-L1</title>
         <link rel="icon" href="/Isro.png" sizes="any" />
-
       </Head>
       <Hero
         title={title}
-        subtitle={subtitle}
         backgroundImage={backgroundImage}
-        videoLink={videoLink}
+        subtitle={"Recent Launched"}
       />
       <Info
         title={title}
         description={description}
         moreInfoLink={moreInfoLink}
+        videoLink={videoLink}
+        subtitle={subtitle}
       />
     </div>
   );

@@ -19,18 +19,18 @@ const NVS01 = () => {
       <Head>
         <title>Isro - NVS-01</title>
         <link rel="icon" href="/Isro.png" sizes="any" />
-
       </Head>
       <Hero
         title={title}
-        subtitle={subtitle}
+        subtitle={"Launch Completed"}
         backgroundImage={backgroundImage}
-        videoLink={videoLink}
       />
       <Info
         title={title}
         description={description}
         moreInfoLink={moreInfoLink}
+        videoLink={videoLink}
+        subtitle={subtitle}
       />
     </div>
   );

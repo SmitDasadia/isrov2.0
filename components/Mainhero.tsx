@@ -1,4 +1,3 @@
-// ReusableHeroSection.tsx
 import React, { FC, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
@@ -18,6 +17,8 @@ const Mainhero: FC<MainheroProps> = ({
 
   const sectionStyle = {
     backgroundImage: `url('${backgroundImageUrl}')`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
   };
 
   const [isMounted, setIsMounted] = useState(false);
@@ -34,7 +35,7 @@ const Mainhero: FC<MainheroProps> = ({
 
   return (
     <motion.section
-      className="flex justify-center items-center h-screen bg-center bg-cover"
+      className="flex justify-center items-center h-screen"
       style={sectionStyle}
     >
       <div className="absolute inset-0 bg-black opacity-10"></div>

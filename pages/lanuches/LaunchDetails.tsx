@@ -31,7 +31,7 @@ const LaunchDetails = () => {
       <Hero
         title={missiontitle}
         backgroundImage={backgroundImage}
-        subtitle={"Recent Launched"}
+        subtitle={"Launched"}
       />
       <Info
         title={missiontitle}

@@ -13,24 +13,25 @@ const Lunches = () => {
         <title>Isro - Launches</title>
         <link rel="icon" href="/Isro.png" sizes="any" />
       </Head>
-      <Hero
-        backgroundImage="/lunches/bg4.png"
-        title="Launches"
-        subtitle={""}
-      />
+      <Hero backgroundImage="/lunches/bg4.png" title="Launches" subtitle={""} />
 
       <div className="p-4">
-        <div className="container mx-auto grid gap-4 grid-cols-1 sm:grid-cols-2 p-5">
+        <div className="container mx-auto grid gap-4 grid-cols-1 sm:grid-cols-2 p-2">
           {lunches.map((launch) => (
-            <Link href={launch.path} key={launch.title}>
+            <Link
+              href={`/lanuches/LaunchDetails?title=${encodeURIComponent(
+                launch.title
+              )}`}
+              key={launch.title}
+            >
               <motion.div className="p-4  ">
                 <div className="flex justify-center items-center p-2 h-full">
                   <Image
                     src={launch.img}
                     alt={launch.title}
                     width={600}
-                    height={400} 
-                    className="mt-4 h-72 w-full "
+                    height={400}
+                    className="mt-4 h-44 sm:h-72 w-full "
                   />
                 </div>
                 <div className="text-white p-2 pt-5">
@@ -40,7 +41,11 @@ const Lunches = () => {
                   <h2 className="text-3xl font-bold">{launch.title}</h2>
                 </div>
                 <div className="pt-5 ml-2 flex justify-center items-center sm:justify-start sm:items-start ">
-                  <Link href={launch.path}>
+                  <Link
+                    href={`/lanuches/LaunchDetails?title=${encodeURIComponent(
+                      launch.title
+                    )}`}
+                  >
                     <button className="border hover:bg-white hover:text-black text-white py-4 px-16 text-lg font-semibold transition duration-300 ">
                       More Info
                     </button>

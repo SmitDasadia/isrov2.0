@@ -20,25 +20,25 @@ export default function Home() {
       />
 
       <ReusableHeroSection
-        backgroundImageUrl="https://www.isro.gov.in/media_isro/image/index/PSLVC55/PSLVC55_gallery/post_launch/SB3_8531.jpg.webp"
+        backgroundImageUrl="/LaunchCompleted/Aditya_L1Lunch1.jpg"
         title="Recent Launch"
         subtitle="ADITYA-L1"
         buttonText="More Info"
-        buttonLink="/public/LaunchCompleted/Aditya_L1Lunch1.jpg"
+        buttonLink="/lanuches/LaunchDetails?title=Aditya-L1"
       />
       <ReusableHeroSection
-        backgroundImageUrl="/DS-SAR/DS-SARBG4.png"
+        backgroundImageUrl="/LaunchCompleted/DS-SAR-Launch.png"
         title="Launch Compelted"
         subtitle="DS-SAR"
         buttonText="More Info"
-        buttonLink="/lanuches/DS-SAR"
+        buttonLink="/lanuches/LaunchDetails?title=DS-SAR"
       />
       <ReusableHeroSection
-        backgroundImageUrl="/Chandrayaan3/chandrayann3Lunch4.png"
+        backgroundImageUrl="/LaunchCompleted/chandrayann3Lunch4.png"
         title="Launch Compelted"
         subtitle="Chandrayaan-3"
         buttonText="More Info"
-        buttonLink="/lanuches/Chandrayaan3"
+        buttonLink="/lanuches/LaunchDetails?title=Chandrayaan-3"
       />
     </main>
   );

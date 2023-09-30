@@ -28,7 +28,7 @@ const Hero: FC<HeroProps> = ({ title, subtitle, backgroundImage }) => {
         layout="fill"
         objectFit="cover"
       />
-      <div className="absolute inset-0 bg-black opacity-40"></div>
+      <div className="absolute inset-0 bg-black opacity-20"></div>
       <motion.div
         className="container mx-auto flex flex-col justify-end h-full relative z-10 pb-10"
         initial="hidden"

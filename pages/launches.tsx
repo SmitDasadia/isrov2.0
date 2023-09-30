@@ -31,7 +31,7 @@ const Lunches = () => {
                     alt={launch.title}
                     width={600}
                     height={400}
-                    className="mt-4 h-44 sm:h-72 w-full "
+                    className="mt-4 h-48 sm:h-80 w-full "
                   />
                 </div>
                 <div className="text-white p-2 pt-5">

@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/Isro.png" sizes="any" />
       </Head>
       <Mainhero
-        backgroundImageUrl="/lunches/bg2.png"
+        backgroundImageUrl="/lunches/bg6.png"
         title="Space Tech Serving Humanity"
       />
 

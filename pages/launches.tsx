@@ -24,7 +24,7 @@ const Lunches = () => {
               )}`}
               key={launch.title}
             >
-              <motion.div className="p-4  ">
+              <motion.div className="p-4">
                 <div className="flex justify-center items-center p-2 h-full">
                   <Image
                     src={launch.img}

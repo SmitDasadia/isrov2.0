@@ -17,12 +17,12 @@ export const sidebarLinks = [
   },
   {
 
-    route: "/lanuches/Adityal1",
+    route: "/lanuches/LaunchDetails?title=Aditya-L1",
     label: "Aditya-L1",
   },
   {
 
-    route: "/lanuches/Chandrayaan3",
+    route: "/lanuches/LaunchDetails?title=Chandrayaan-3",
     label: "Chandrayaan-3",
   },
   {

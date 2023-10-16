@@ -40,6 +40,11 @@ export const sidebarLinks = [
     route: "/launchers",
     label: "Launchers",
   },
+  {
+
+    route: "/updates",
+    label: "Updates",
+  },
 
 ];
 

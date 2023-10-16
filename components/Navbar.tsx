@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
           <div className="hidden sm:flex sm:flex-grow sm:justify-center">
             {sidebarLinks.slice(0, 5).map((link) => (
               <Link href={link.route} key={link.label}>
-                <div className="text-md sm:text-xl text-white px-5 font-semibold sidebar-link">
+                <div className="text-md sm:text-lg text-white px-5 font-semibold sidebar-link">
                   {link.label}
                   <div className="link-underline"></div>
                 </div>

@@ -25,25 +25,36 @@ const Navbar: React.FC = () => {
     <nav
       className="bg-transparent py-4 absolute top-0 w-full"
       style={{
-        // Make the Navbar transparent
         background: "none",
-        zIndex: 999, // Add a high z-index value
+        zIndex: 999,
       }}
     >
-      <div className="container mx-auto flex justify-center sm:justify-between items-center">
-        <Link href="/">
-          <div className="flex items-center">
-            <img
-              src="https://concretecivil.com/wp-content/uploads/2017/02/Indian_Space_Research_Organisation_Logo.svg-1024x990.png"
-              alt="Logo"
-              className="w-16 h-16"
-            />
+      <header>
+        <div className="container mx-auto flex items-center justify-center sm:justify-between">
+          <Link href="/">
+            <div className="flex items-center">
+              <img
+                src="https://concretecivil.com/wp-content/uploads/2017/02/Indian_Space_Research_Organisation_Logo.svg-1024x990.png"
+                alt="Logo"
+                className="w-16 h-16"
+              />
+            </div>
+          </Link>
+          <div className="hidden sm:flex sm:flex-grow sm:justify-center">
+            {sidebarLinks.slice(0, 5).map((link) => (
+              <Link href={link.route} key={link.label}>
+                <div className="text-lg sm:text-xl text-white px-5">
+                  {link.label}
+                </div>
+              </Link>
+            ))}
           </div>
-        </Link>
-      </div>
-      <button onClick={toggleSidebar} className="absolute top-7 right-7 ">
-        <CgMenuRightAlt size={28} className="text-white" />
-      </button>
+          <button onClick={toggleSidebar} className="absolute top-7 right-7 ">
+            <CgMenuRightAlt size={28} className="text-white" />
+          </button>
+        </div>
+      </header>
+
       <AnimatePresence>
         {isSidebarVisible && (
           <motion.section
@@ -52,8 +63,9 @@ const Navbar: React.FC = () => {
             exit={{ opacity: 0, x: "100%" }}
             transition={{
               type: "spring",
-              stiffness: 400,
-              damping: 25,
+              stiffness: 200, // Adjust the stiffness for smoother animation
+              damping: 20, // Adjust the damping for smoother animation
+              duration: 0.2, // Adjust the duration for smoother animation
             }}
             className={`flex-col justify-between gap-12 h-screen overflow-auto sidebar fixed top-0 right-0 bg-[#030303] p-4 sm:p-10 transform-all transition-width duration-100 z-50 w-2/3 sm:w-2/3 lg:w-1/3 xl:w-1/4`}
           >
@@ -63,7 +75,28 @@ const Navbar: React.FC = () => {
             >
               <CgClose size={28} className="text-white" />
             </span>
-            <nav className="flex w-full flex-1 flex-col gap-4 sm:gap-6 pt-8 sm:pt-20 p-4 sm:p-15">
+            <nav className="hidden sm:flex w-full flex-1 flex-col gap-4 sm:gap-6 pt-8 sm:pt-20 p-4 sm:p-15">
+              {sidebarLinks.slice(5).map((link) => {
+                const isActive =
+                  (pathname.includes(link.route) && link.route.length > 1) ||
+                  pathname === link.route;
+
+                return (
+                  <Link
+                    href={link.route}
+                    key={link.label}
+                    onClick={closeMenu}
+                    className={`relative flex items-center p-2 sm:p-1 rounded-lg sidebar-link ${
+                      isActive ? "text-white font-bold" : "text-white"
+                    }`}
+                  >
+                    <div className="text-lg sm:text-xl">{link.label}</div>
+                    <div className="link-underline"></div>
+                  </Link>
+                );
+              })}
+            </nav>
+            <nav className="flex sm:hidden w-full flex-1 flex-col gap-4 sm:gap-6 pt-8 sm:pt-20 p-4 sm:p-15">
               {sidebarLinks.map((link) => {
                 const isActive =
                   (pathname.includes(link.route) && link.route.length > 1) ||

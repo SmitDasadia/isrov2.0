@@ -48,7 +48,7 @@ const ReusableHeroSection: FC<ReusableHeroSectionProps> = ({
       <motion.div
         className="container mx-auto flex flex-col justify-end h-full relative z-10 pb-10"
         initial="hidden"
-        animate={isMounted ? "visible" : "hidden"} // Trigger animation when isMounted is true
+        animate={isMounted ? "visible" : "hidden"} // Trigger animation when  initial="hidden"
         variants={fadeInVariants}
       >
         <div className="mb-8 ml-8">

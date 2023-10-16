@@ -43,8 +43,9 @@ const Navbar: React.FC = () => {
           <div className="hidden sm:flex sm:flex-grow sm:justify-center">
             {sidebarLinks.slice(0, 5).map((link) => (
               <Link href={link.route} key={link.label}>
-                <div className="text-lg sm:text-xl text-white px-5">
+                <div className="text-md sm:text-xl text-white px-5 font-semibold sidebar-link">
                   {link.label}
+                  <div className="link-underline"></div>
                 </div>
               </Link>
             ))}
@@ -60,10 +61,10 @@ const Navbar: React.FC = () => {
           <motion.section
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "100%" }}
+            exit={{ opacity: 0, x: "50%" }}
             transition={{
               type: "spring",
-              stiffness: 200, // Adjust the stiffness for smoother animation
+              stiffness: 225, // Adjust the stiffness for smoother animation
               damping: 20, // Adjust the damping for smoother animation
               duration: 0.2, // Adjust the duration for smoother animation
             }}

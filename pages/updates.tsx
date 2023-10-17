@@ -18,7 +18,19 @@ const Updates = () => {
           subtitle=""
         />
 
-       
+        <div className="p-4">
+          <div className="container mx-auto grid gap-4 grid-cols-1  p-2">
+            {updates.map((item) => (
+              <Update
+                key={item.name}
+                image={item.image}
+                title={item.name}
+                subtitle={item.qualificationDate}
+                desc={item.description}
+              />
+            ))}
+          </div>
+        </div>
       </section>
     </>
   );

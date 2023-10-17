@@ -7,33 +7,38 @@ interface UpdateProps {
   image: string;
   title: string;
   subtitle: string;
+  desc: string[] | string;
 }
 
-const Update: React.FC<UpdateProps> = ({ image, title, subtitle }) => {
+const Update: React.FC<UpdateProps> = ({ image, title, subtitle,desc }) => {
   const fadeInVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 1, delay: 0.5 } },
   };
 
   return (
-    <motion.article className="relative min-h-screen flex">
-      <div className="p-10">
-        <div className="p-5">
-          <img src={image} alt="" className="h-72 max-w-full" />
+    <motion.article className="relative min-h-screen flex border-b-[0.2px]">
+      <div className="p-3">
+        <div className="p-2">
+          <img src={image} alt="" className="w-full h-1/2" />
         </div>
 
-        <div className="w-1/2 bg-gray-800 p-10 flex flex-col justify-center">
+        <div className="p-2 flex flex-col justify-center">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={fadeInVariants}
           >
-            <h1 className="text-4xl sm:text-6xl md:text-7xl text-white font-extrabold mb-4">
-              {title}
-            </h1>
-            <p className="text-xl sm:text-2xl text-white font-semibold">
+            <p className="text-lg sm:text-xl text-gray-300 font-semibold pb-2">
               {subtitle}
             </p>
+            <h1 className="text-xl sm:text-3xl md:text-4xl text-white font-bold mb-4">
+              {title}
+            </h1>
+            <p className="text-lg sm:text-xl text-gray-300 font-semibold">
+              {desc}
+            </p>
+            
           </motion.div>
         </div>
       </div>

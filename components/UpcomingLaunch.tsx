@@ -71,16 +71,16 @@ const UpcomingLaunch: FC<UpcomingLaunchProps> = ({
   function formatTimeLeft(time: { days: number; hours: number; minutes: number; seconds: number }) {
     const parts = [];
     if (time.days > 0) {
-      parts.push(`${time.days} d${time.days > 1 ? 's' : ''}`);
+      parts.push(`${time.days} day${time.days > 1 ? 's' : ''}`);
     }
     if (time.hours > 0) {
-      parts.push(`${time.hours} hr${time.hours > 1 ? 's' : ''}`);
+      parts.push(`${time.hours} hour${time.hours > 1 ? 's' : ''}`);
     }
     if (time.minutes > 0) {
-      parts.push(`${time.minutes} min${time.minutes > 1 ? 's' : ''}`);
+      parts.push(`${time.minutes} minute${time.minutes > 1 ? 's' : ''}`);
     }
     if (time.seconds > 0) {
-      parts.push(`${time.seconds} ${time.seconds >= 0 ? 's' : ''}`);
+      parts.push(`${time.seconds} second${time.seconds > 1 ? 's' : ''}`);
     }
 
     return parts.join(' : ');

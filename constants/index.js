@@ -27,6 +27,11 @@ export const sidebarLinks = [
   },
   {
 
+    route: "/gaganyaan",
+    label: "Gaganyaan",
+  },
+  {
+
     route: "/mission",
     label: "Mission",
   },

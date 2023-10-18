@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
             </div>
           </Link>
           <div className="hidden sm:flex sm:flex-grow sm:justify-center">
-            {sidebarLinks.slice(0, 5).map((link) => (
+            {sidebarLinks.slice(0, 6).map((link) => (
               <Link href={link.route} key={link.label}>
                 <div className="text-md sm:text-lg text-white px-5 font-semibold sidebar-link">
                   {link.label}
@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
               damping: 20, // Adjust the damping for smoother animation
               duration: 0.2, // Adjust the duration for smoother animation
             }}
-            className={`flex-col justify-between gap-12 h-screen overflow-auto sidebar fixed top-0 right-0 bg-[#030303] p-4 sm:p-10 transform-all transition-width duration-100 z-50 w-2/3 sm:w-2/3 lg:w-1/3 xl:w-1/4`}
+            className={`flex-col justify-between gap-12 h-screen overflow-auto sidebar fixed top-0 right-0 bg-black text-white p-4 sm:p-10 transform-all transition-width duration-100 z-50 w-2/3 sm:w-2/3 lg:w-1/3 xl:w-1/4`}
           >
             <span
               onClick={toggleSidebar}
@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
               <CgClose size={28} className="text-white" />
             </span>
             <nav className="hidden sm:flex w-full flex-1 flex-col gap-4 sm:gap-6 pt-8 sm:pt-20 p-4 sm:p-15">
-              {sidebarLinks.slice(5).map((link) => {
+              {sidebarLinks.slice(6).map((link) => {
                 const isActive =
                   (pathname.includes(link.route) && link.route.length > 1) ||
                   pathname === link.route;

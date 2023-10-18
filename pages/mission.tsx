@@ -5,15 +5,14 @@ import { motion } from "framer-motion";
 import Hero from "@/components/Launches/Hero";
 import { spaceProgram } from "@/lib/data/SpaceProgram";
 import MissionHero from "@/components/Mission/MissionHero";
+import ReusableHead from "@/components/Head";
 
 const Mission = () => {
   return (
     <>
       <section>
-        <Head>
-          <title>Isro - Mission</title>
-          <link rel="icon" href="/Isro.png" sizes="any" />
-        </Head>
+      <ReusableHead title={"Isro - Mission"} /> 
+       
 
         <Hero
           backgroundImage="/mission/missionbackground.png"

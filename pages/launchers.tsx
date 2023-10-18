@@ -3,15 +3,16 @@ import Hero from "@/components/Launches/Hero";
 import Head from "next/head";
 import { lunchers } from "@/lib/data/lunchers";
 import LaunchVehicles from "@/components/launchers/LaunchVehicles";
+import ReusableHead from "@/components/Head";
 
 const Launchers = () => {
   return (
     <div>
-      <Head>
-        <title>Isro - Launchers</title>
-        <link rel="icon" href="/Isro.png" sizes="any" />
+     
+      <ReusableHead title={"Isro - Launchers"} /> 
+        
 
-      </Head>
+      
       <Hero backgroundImage="/Lunchers/lunchers.png" title="Launchers" subtitle={""} />
 
       <div className="pt-5 p-5">

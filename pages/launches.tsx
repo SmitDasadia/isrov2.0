@@ -5,14 +5,13 @@ import { motion } from "framer-motion";
 import Hero from "@/components/Launches/Hero";
 import { lunches } from "@/lib/data/lunches";
 import Image from "next/image";
+import ReusableHead from "@/components/Head";
 
 const Lunches = () => {
   return (
     <div>
-      <Head>
-        <title>Isro - Launches</title>
-        <link rel="icon" href="/Isro.png" sizes="any" />
-      </Head>
+       <ReusableHead title={"Isro - Launches"} /> 
+     
       <Hero backgroundImage="/lunches/bg4.png" title="Launches" subtitle={""} />
 
       <div className="p-4">

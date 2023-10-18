@@ -12,6 +12,7 @@ import PayloadFairing from "@/components/launchers/PayloadFairing";
 import ReusableSlider from "@/components/launchers/Silder";
 import { gslv } from "@/lib/data/GSLV";
 import VideoHero from "@/components/VideoHero";
+import ReusableHead from "@/components/Head";
 
 const GSLV = () => {
   const items = [
@@ -94,11 +95,8 @@ const GSLV = () => {
   ];
   return (
     <div>
-      <Head>
-        <title>Isro - GSLV</title>
-        <link rel="icon" href="/Isro.png" sizes="any" />
-
-      </Head>
+       <ReusableHead title={"Isro - GSLV"} /> 
+     
       <Hero
         backgroundImage="/Lunchers/GSLVBG3.png"
         title="GSLV"

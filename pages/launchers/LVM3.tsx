@@ -10,6 +10,7 @@ import Stage2 from "@/components/launchers/LVM3/Stage2";
 import Stage3 from "@/components/launchers/LVM3/Stage3";
 import { lvm3 } from "@/lib/data/LVM3";
 import VideoHero from "@/components/VideoHero";
+import ReusableHead from "@/components/Head";
 const LVM3 = () => {
   const items = [
     <Overview
@@ -74,11 +75,8 @@ const LVM3 = () => {
   ];
   return (
     <div>
-      <Head>
-        <title>Isro - LVM3</title>
-        <link rel="icon" href="/Isro.png" sizes="any" />
-
-      </Head>
+       <ReusableHead title={"Isro - LVM3"} /> 
+     
       <Hero
         backgroundImage="/Lunchers/LVM3BG2.png"
         title="LVM3"

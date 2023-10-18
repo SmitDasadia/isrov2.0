@@ -4,16 +4,15 @@ import { Inter } from "next/font/google";
 import Head from "next/head";
 import ReusableHeroSection from "@/components/Hero";
 import Mainhero from "@/components/Mainhero";
+import ReusableHead from "@/components/Head";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <main>
-      <Head>
-        <title>Indian Space Research Organisation</title>
-        <link rel="icon" href="/Isro.png" sizes="any" />
-      </Head>
+      <ReusableHead title={"Indian Space Research Organisation"} /> 
+     
       <Mainhero
         backgroundImageUrl="/lunches/bg6.png"
         title="Space Tech Serving Humanity"

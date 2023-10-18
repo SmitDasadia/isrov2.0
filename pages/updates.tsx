@@ -3,14 +3,13 @@ import Head from "next/head";
 import Hero from "@/components/Launches/Hero";
 import Update from "@/components/Updates";
 import { updates } from "@/lib/data/Updates";
+import ReusableHead from "@/components/Head";
 const Updates = () => {
   return (
     <>
       <section>
-        <Head>
-          <title>Isro - Updates</title>
-          <link rel="icon" href="/Isro.png" sizes="any" />
-        </Head>
+      <ReusableHead title={"Isro - Updates"} /> 
+       
 
         <Hero
           backgroundImage="/Updates/Updates.png"

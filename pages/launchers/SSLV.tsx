@@ -11,6 +11,7 @@ import Stage4 from "@/components/launchers/Stage4";
 import ReusableSlider from "@/components/launchers/Silder";
 import { sslv } from "@/lib/data/SSLV";
 import VideoHero from "@/components/VideoHero";
+import ReusableHead from "@/components/Head";
 
 const SSLV = () => {
   const items = [
@@ -87,11 +88,8 @@ const SSLV = () => {
   ];
   return (
     <div>
-      <Head>
-        <title>Isro - SSLV</title>
-        <link rel="icon" href="/Isro.png" sizes="any" />
+      <ReusableHead title={"Isro - SSLV"} />
 
-      </Head>
       <Hero
         backgroundImage="/Lunchers/SSLVBG2.png"
         title="SSLV"
@@ -99,7 +97,7 @@ const SSLV = () => {
       />
 
       <LaunchStats data={sslv.LaunchStatistics} />
-      <Hero2  info={sslv.desc} />
+      <Hero2 info={sslv.desc} />
 
       <ReusableSlider items={items} />
       <VideoHero

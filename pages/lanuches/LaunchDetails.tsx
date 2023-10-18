@@ -4,6 +4,7 @@ import Head from "next/head";
 import Hero from "@/components/LaunchedCompleted/Hero";
 import Info from "@/components/LaunchedCompleted/Info";
 import { lunches } from "@/lib/data/lunches";
+import ReusableHead from "@/components/Head";
 
 const LaunchDetails = () => {
   const router = useRouter();
@@ -24,10 +25,8 @@ const LaunchDetails = () => {
 
   return (
     <div>
-      <Head>
-        <title>Isro - {missiontitle}</title>
-        <link rel="icon" href="/Isro.png" sizes="any" />
-      </Head>
+       <ReusableHead title={`Isro - ${missiontitle}`} /> 
+     
       <Hero
         title={missiontitle}
         backgroundImage={backgroundImage}

@@ -13,6 +13,7 @@ import Stage4 from "@/components/launchers/Stage4";
 import PayloadFairing from "@/components/launchers/PayloadFairing";
 import ReusableSlider from "@/components/launchers/Silder";
 import VideoHero from "@/components/VideoHero";
+import ReusableHead from "@/components/Head";
 const PSLV = () => {
   const items = [
     <Overview
@@ -117,11 +118,8 @@ const PSLV = () => {
   ];
   return (
     <div>
-      <Head>
-        <title>Isro - PSLV</title>
-        <link rel="icon" href="/Isro.png" sizes="any" />
-
-      </Head>
+       <ReusableHead title={"Isro - PSLV"} /> 
+     
       
       <Hero
         backgroundImage="/Lunchers/PSLVBG3.png"

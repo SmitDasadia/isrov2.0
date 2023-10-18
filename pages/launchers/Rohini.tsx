@@ -4,14 +4,13 @@ import Hero2 from "@/components/launchers/Hero2";
 import Head from "next/head";
 import OperationalRockets from "@/components/launchers/Rohini/OperationalRockets";
 import { soundingRockets } from "@/lib/data/SoundingRockets";
+import ReusableHead from "@/components/Head";
 
 const SSLV = () => {
   return (
     <div>
-      <Head>
-        <title>Isro - Rohini(Sounding Rockets)</title>
-        <link rel="icon" href="/Isro.png" sizes="any" />
-      </Head>
+       <ReusableHead title={"Isro - Rohini(Sounding Rockets)"} /> 
+     
       <Hero backgroundImage="/Lunchers/SR.png" title="Rohini" subtitle="" />
 
       <Hero2 info={soundingRockets.description} />

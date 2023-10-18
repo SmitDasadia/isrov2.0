@@ -8,6 +8,9 @@ import UpcommingLaunch from "@/components/UpcomingLaunch";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  // Example launch date and time (replace with your actual launch date and time)
+const launchDateTime = new Date("2023-10-21T08:00:00");
+
   return (
     <main>
       <ReusableHead title={"Indian Space Research Organisation"} />
@@ -22,10 +25,7 @@ export default function Home() {
         title={"Upcomming Launch"}
         subtitle={"GAGANYAAN TEST VEHICLE TV-D1"}
         buttonText={"More Info"}
-        buttonLink={"/lanuches/UpcomingLaunch?title=GAGANYAAN-TV-D1"}
-        hours={40}
-        minutes={25}
-        seconds={0}
+        buttonLink={"/lanuches/UpcomingLaunch?title=GAGANYAAN-TV-D1"} launchDateTime={launchDateTime}        
       />
 
       <ReusableHeroSection

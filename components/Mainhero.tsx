@@ -45,7 +45,7 @@ const Mainhero: FC<MainheroProps> = ({
         animate={isMounted ? "visible" : "hidden"}
         variants={fadeInVariants}
       >
-        <div className="mb-8 ml-8 p-6">
+        <div className="p-6">
           <h2 className="text-4xl sm:text-5xl md:text-6xl text-white font-extrabold">
             {title}
           </h2>

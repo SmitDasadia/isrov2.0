@@ -8,9 +8,7 @@ interface UpcomingLaunchProps {
   subtitle: string;
   buttonText: string;
   buttonLink: string;
-  hours: number;
-  minutes: number;
-  seconds: number;
+  launchDateTime: Date;
 }
 
 const UpcomingLaunch: FC<UpcomingLaunchProps> = ({
@@ -19,41 +17,19 @@ const UpcomingLaunch: FC<UpcomingLaunchProps> = ({
   subtitle,
   buttonText,
   buttonLink,
-  hours,
-  minutes,
-  seconds,
+  launchDateTime,
 }) => {
-  const [timeLeft, setTimeLeft] = useState({
-    hours,
-    minutes,
-    seconds,
-  });
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(launchDateTime));
 
   useEffect(() => {
     const timer = setInterval(() => {
-      if (
-        timeLeft.hours === 0 &&
-        timeLeft.minutes === 0 &&
-        timeLeft.seconds === 0
-      ) {
-        clearInterval(timer);
-      } else if (timeLeft.seconds > 0) {
-        setTimeLeft({ ...timeLeft, seconds: timeLeft.seconds - 1 });
-      } else if (timeLeft.minutes > 0) {
-        setTimeLeft({
-          ...timeLeft,
-          minutes: timeLeft.minutes - 1,
-          seconds: 59,
-        });
-      } else if (timeLeft.hours > 0) {
-        setTimeLeft({ hours: timeLeft.hours - 1, minutes: 59, seconds: 59 });
-      }
+      setTimeLeft(calculateTimeLeft(launchDateTime));
     }, 1000);
 
     return () => {
       clearInterval(timer);
     };
-  }, [timeLeft]);
+  }, [launchDateTime]);
 
   const fadeInVariants = {
     hidden: { opacity: 0 },
@@ -74,9 +50,41 @@ const UpcomingLaunch: FC<UpcomingLaunchProps> = ({
     return () => clearTimeout(timeout);
   }, []);
 
-  const formatTime = (time: number) => {
-    return time < 10 ? `0${time}` : time;
-  };
+  // Function to calculate the time left
+  function calculateTimeLeft(launchTime: Date) {
+    const now = new Date();
+    const timeDiff = launchTime.getTime() - now.getTime();
+
+    if (timeDiff <= 0) {
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    }
+
+    const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+    return { days, hours, minutes, seconds };
+  }
+
+  // Function to format time left
+  function formatTimeLeft(time: { days: number; hours: number; minutes: number; seconds: number }) {
+    const parts = [];
+    if (time.days > 0) {
+      parts.push(`${time.days} d${time.days > 1 ? 's' : ''}`);
+    }
+    if (time.hours > 0) {
+      parts.push(`${time.hours} hr${time.hours > 1 ? 's' : ''}`);
+    }
+    if (time.minutes > 0) {
+      parts.push(`${time.minutes} min${time.minutes > 1 ? 's' : ''}`);
+    }
+    if (time.seconds > 0) {
+      parts.push(`${time.seconds} ${time.seconds >= 0 ? 's' : ''}`);
+    }
+
+    return parts.join(' : ');
+  }
 
   return (
     <motion.section
@@ -91,9 +99,8 @@ const UpcomingLaunch: FC<UpcomingLaunchProps> = ({
         variants={fadeInVariants}
       >
         <div className="mb-8 ml-8">
-          <h2 className="text-lg sm:text-xl md:text-2xl text-white pb-2">
-            {title} in {formatTime(timeLeft.hours)}:
-            {formatTime(timeLeft.minutes)}:{formatTime(timeLeft.seconds)}
+          <h2 className="text-sm sm:text-xl md:text-2xl text-white pb-2">
+            {title} in {formatTimeLeft(timeLeft)}
           </h2>
           <p className="text-4xl sm:text-5xl md:text-6xl text-white font-extrabold">
             {subtitle}

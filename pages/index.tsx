@@ -1,21 +1,31 @@
 "use client";
-import Image from "next/image";
 import { Inter } from "next/font/google";
-import Head from "next/head";
 import ReusableHeroSection from "@/components/Hero";
 import Mainhero from "@/components/Mainhero";
 import ReusableHead from "@/components/Head";
+import UpcommingLaunch from "@/components/UpcomingLaunch";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <main>
-      <ReusableHead title={"Indian Space Research Organisation"} /> 
-     
+      <ReusableHead title={"Indian Space Research Organisation"} />
+
       <Mainhero
         backgroundImageUrl="/lunches/bg6.png"
         title="Space Tech Serving Humanity"
+      />
+
+      <UpcommingLaunch
+        backgroundImageUrl={"/UpcommingLaunch/TV-D1-2.png"}
+        title={"Upcomming Launch"}
+        subtitle={"GAGANYAAN TEST VEHICLE TV-D1"}
+        buttonText={"More Info"}
+        buttonLink={"/lanuches/UpcomingLaunch?title=GAGANYAAN-TV-D1"}
+        hours={40}
+        minutes={25}
+        seconds={0}
       />
 
       <ReusableHeroSection

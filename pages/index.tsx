@@ -21,7 +21,7 @@ const launchDateTime = new Date("2023-10-21T08:00:00");
       />
 
       <UpcommingLaunch
-        backgroundImageUrl={"/UpcommingLaunch/TV-D1-2.png"}
+        backgroundImageUrl={"/UpcommingLaunch/TV-D1-1.png"}
         title={"Upcomming Launch"}
         subtitle={"GAGANYAAN TEST VEHICLE TV-D1"}
         buttonText={"More Info"}

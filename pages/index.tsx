@@ -29,7 +29,7 @@ const launchDateTime = new Date("2023-10-21T08:00:00");
       />
 
       <ReusableHeroSection
-        backgroundImageUrl="/LaunchCompleted/Aditya_L1Lunch1.jpg"
+        backgroundImageUrl="/LaunchCompleted/Aditya_L1Lunch1.png"
         title="Recent Launch"
         subtitle="ADITYA-L1"
         buttonText="More Info"

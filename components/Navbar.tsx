@@ -29,28 +29,28 @@ const Navbar: React.FC = () => {
         zIndex: 999,
       }}
     >
-      <header>
+      <header className="p-2 sm:p-3 md:p-2">
         <div className="container mx-auto flex items-center justify-center sm:justify-between">
           <Link href="/">
-            <div className="flex items-center">
+            <div className="flex items-center p-2">
               <img
                 src="https://concretecivil.com/wp-content/uploads/2017/02/Indian_Space_Research_Organisation_Logo.svg-1024x990.png"
                 alt="Logo"
-                className="w-16 h-16"
+                className="w-16 h-16 "
               />
             </div>
           </Link>
-          <div className="hidden sm:flex sm:flex-grow sm:justify-center">
+          <div className="hidden sm:flex sm:flex-grow sm:justify-center md:mr-4">
             {sidebarLinks.slice(0, 6).map((link) => (
               <Link href={link.route} key={link.label}>
-                <div className="text-md sm:text-lg text-white px-5 font-semibold sidebar-link">
+                <div className="text-md sm:text-lg text-white px-5 sm:px-3 md:px-3 lg:px-5 font-semibold sidebar-link">
                   {link.label}
                   <div className="link-underline"></div>
                 </div>
               </Link>
             ))}
           </div>
-          <button onClick={toggleSidebar} className="absolute top-7 right-7 ">
+          <button onClick={toggleSidebar} className="absolute top-9 right-7  sm:top-auto sm:right-7 ">
             <CgMenuRightAlt size={28} className="text-white" />
           </button>
         </div>
@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
               damping: 20, // Adjust the damping for smoother animation
               duration: 0.2, // Adjust the duration for smoother animation
             }}
-            className={`flex-col justify-between gap-12 h-screen overflow-auto sidebar fixed top-0 right-0 bg-black text-white p-4 sm:p-10 transform-all transition-width duration-100 z-50 w-2/3 sm:w-2/3 lg:w-1/3 xl:w-1/4`}
+            className={`flex-col justify-between gap-12 h-screen overflow-auto sidebar fixed top-0 right-0 bg-black text-white p-4 sm:p-10 transform-all transition-width duration-100 z-50 w-2/3 sm:w-2/3 lg:w-1/3 xl:w-1/4 `}
           >
             <span
               onClick={toggleSidebar}

@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   // Example launch date and time (replace with your actual launch date and time)
-const launchDateTime = new Date("2023-10-21T08:00:00");
+  const launchDateTime = new Date("2023-10-21T08:00:00");
 
   return (
     <main>
@@ -20,12 +20,12 @@ const launchDateTime = new Date("2023-10-21T08:00:00");
         title="Space Tech Serving Humanity"
       />
 
-      <UpcommingLaunch
-        backgroundImageUrl={"/UpcommingLaunch/TV-D1-1.png"}
-        title={"Upcomming Launch"}
-        subtitle={"GAGANYAAN TEST VEHICLE TV-D1"}
-        buttonText={"More Info"}
-        buttonLink={"/lanuches/UpcomingLaunch?title=GAGANYAAN-TV-D1"} launchDateTime={launchDateTime}        
+      <ReusableHeroSection
+        backgroundImageUrl="/LaunchCompleted/TV-D1.png"
+        title="Recent Launch"
+        subtitle="Gaganyaan TV-D1"
+        buttonText="More Info"
+        buttonLink="/lanuches/LaunchDetails?title=GAGANYAAN-TV-D1"
       />
 
       <ReusableHeroSection

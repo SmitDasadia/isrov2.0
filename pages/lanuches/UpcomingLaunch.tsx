@@ -58,7 +58,7 @@ const Upcominglaunch = () => {
             </tr>
           </thead>
           <tbody>
-            {flightEvents.map((event, index) => (
+            {flightEvents.map((event: any, index: number) => (
               <tr key={index} className="text-white font-semibold ">
                 <td className="p-4 border-b-[0.2px]">{event.event}</td>
                 <td className="p-4 border-b-[0.2px]">{event.time}</td>

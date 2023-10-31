@@ -32,12 +32,8 @@ const Navbar: React.FC = () => {
       <header className="p-2 sm:p-3 md:p-2">
         <div className="container mx-auto flex items-center justify-center sm:justify-between">
           <Link href="/">
-            <div className="flex items-center p-2">
-              <img
-                src="https://concretecivil.com/wp-content/uploads/2017/02/Indian_Space_Research_Organisation_Logo.svg-1024x990.png"
-                alt="Logo"
-                className="w-16 h-16 "
-              />
+            <div className="flex items-center p-3 sm:p-2">
+              <img src="/ISRO.png" className="sm:w-36" alt="logo" />
             </div>
           </Link>
           <div className="hidden sm:flex sm:flex-grow sm:justify-center md:mr-4">
@@ -50,7 +46,10 @@ const Navbar: React.FC = () => {
               </Link>
             ))}
           </div>
-          <button onClick={toggleSidebar} className="absolute top-9 right-7  sm:top-auto sm:right-7 ">
+          <button
+            onClick={toggleSidebar}
+            className="absolute top-9 right-7  sm:top-auto sm:right-7 "
+          >
             <CgMenuRightAlt size={28} className="text-white" />
           </button>
         </div>

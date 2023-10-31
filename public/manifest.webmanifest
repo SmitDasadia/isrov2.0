@@ -1,11 +1,11 @@
 {
-    "theme_color": "#000000",
-    "background_color": "#000000",
+    "theme_color": "#f69435",
+    "background_color": "#f69435",
     "display": "browser",
     "scope": "/",
     "start_url": "/",
-    "name": "Isro",
-    "short_name": "Isro",
+    "name": "ISRO",
+    "short_name": "isro",
     "icons": [
         {
             "src": "/icon-192x192.png",

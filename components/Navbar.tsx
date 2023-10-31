@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
         <div className="container mx-auto flex items-center justify-center sm:justify-between">
           <Link href="/">
             <div className="flex items-center p-3 sm:p-2">
-              <img src="/ISRO.png" className="sm:w-36" alt="logo" />
+              <img src="/isrologo.png" className="sm:w-36" alt="logo" />
             </div>
           </Link>
           <div className="hidden sm:flex sm:flex-grow sm:justify-center md:mr-4">

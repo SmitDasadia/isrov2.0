@@ -13,7 +13,7 @@ const ReusableHead: FC<ReusableHeadProps> = ({ title, description }) => {
       <title>{title}</title>
       {description && <meta name="description" content={description} />}
       {/* Add more metadata tags here as needed */}
-      <link rel="icon" href="/Isro.png" sizes="any" />
+      <link rel="icon" href="/icon-192x192.png" sizes="32x32" />
     </Head>
   );
 };

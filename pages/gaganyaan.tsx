@@ -21,6 +21,26 @@ const slides = [
       "Gaganyaan Service Module Propulsion System (SMPS) Hot Test Phase1",
   },
   {
+    image: "/Gaganyaan/Lowaltitudeescapemotortest.png",
+    title: "August 10, 2022",
+    subtitle: "Gaganyaan Low Altitude Escape Motor (LEM) Static Test",
+  },
+  {
+    image: "/Gaganyaan/CESJettisoningMotor(CJM)StaticTest.png",
+    title: "August 10, 2022",
+    subtitle: "CES Jettisoning Motor (CJM) Static Test",
+  },
+  {
+    image: "/Gaganyaan/HighaltitudeEscapeMotor(HEM)StaticTest.png",
+    title: "August 10, 2022",
+    subtitle: "High altitude Escape Motor (HEM) Static Test",
+  },
+  {
+    image: "/Gaganyaan/IntegratedMainParachuteAirdropTest(IMAT).png",
+    title: "Nov 18, 2022",
+    subtitle: "Integrated Main Parachute Airdrop Test (IMAT)  ",
+  },
+  {
     image:
       "/Gaganyaan/SuccessfulcompletionofSystemDemonstrationModel(SDM)testsforCrewModulePropulsionSystem.png",
     title: "Apr 5, 2023",
@@ -68,21 +88,7 @@ const slides = [
     title: "August 08-10, 2023",
     subtitle: "Drogue Parachute Deployment Tests",
   },
-  {
-    image: "/Gaganyaan/Lowaltitudeescapemotortest.png",
-    title: "August 10, 2023",
-    subtitle: "Gaganyaan Low Altitude Escape Motor (LEM) Static Test",
-  },
-  {
-    image: "/Gaganyaan/CESJettisoningMotor(CJM)StaticTest.png",
-    title: "August 10, 2023",
-    subtitle: "CES Jettisoning Motor (CJM) Static Test",
-  },
-  {
-    image: "/Gaganyaan/HighaltitudeEscapeMotor(HEM)StaticTest.png",
-    title: "August 10, 2023",
-    subtitle: "High altitude Escape Motor (HEM) Static Test",
-  },
+  
   {
     image: "/Gaganyaan/FirstCrewModuleforGaganyaantestflighttakesshape.png",
     title: "October 06, 2023",

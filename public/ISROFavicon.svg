@@ -1,18 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #fff;
-      }
-    </style>
-  </defs>
-  <rect y="0" width="300" height="300"/>
-  <g>
-    <polygon class="cls-1" points="165.83 37.81 101.88 167.41 148.04 111.51 165.83 265.58 165.83 37.81"/>
-    <polygon class="cls-1" points="97.22 71.27 92.14 81.65 109.29 85.67 114.58 75.08 97.22 71.27"/>
-    <polygon class="cls-1" points="119.24 76.54 114.16 86.92 131.31 90.94 136.61 80.35 119.24 76.54"/>
-    <polygon class="cls-1" points="177.23 89.91 172.15 100.28 189.3 104.31 194.59 93.72 177.23 89.91"/>
-    <polygon class="cls-1" points="199.25 95.18 194.17 105.55 211.32 109.58 216.62 98.99 199.25 95.18"/>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<rect width="300" height="300"/>
+<g>
+	<polygon class="st0" points="169.7,4.2 87.8,170.1 146.9,98.6 169.7,295.8 	"/>
+	<polygon class="st0" points="81.8,47 75.3,60.3 97.3,65.5 104,51.9 	"/>
+	<polygon class="st0" points="110,53.8 103.5,67.1 125.5,72.2 132.3,58.7 	"/>
+	<polygon class="st0" points="184.3,70.9 177.7,84.2 199.7,89.3 206.5,75.8 	"/>
+	<polygon class="st0" points="212.4,77.6 205.9,90.9 227.9,96.1 234.7,82.5 	"/>
+</g>
 </svg>

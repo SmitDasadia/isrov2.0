@@ -43,7 +43,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ slides }) => {
           />
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black opacity-40"></div>
+          <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="absolute bottom-0 left-0 p-8 bg-opacity-50 pb-10">
             <motion.h2
               className="text-white text-xl font-bold"

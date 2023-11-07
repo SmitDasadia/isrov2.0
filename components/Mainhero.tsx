@@ -4,11 +4,13 @@ import { motion } from "framer-motion";
 interface MainheroProps {
   backgroundImageUrl: string;
   title: string;
+  title2?: string;
 }
 
 const Mainhero: FC<MainheroProps> = ({
   backgroundImageUrl,
   title,
+  title2
 }) => {
   const fadeInVariants = {
     hidden: { opacity: 0 },
@@ -48,6 +50,9 @@ const Mainhero: FC<MainheroProps> = ({
         <div className="p-6">
           <h2 className="text-4xl sm:text-5xl md:text-6xl text-white font-extrabold">
             {title}
+          </h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl text-white font-extrabold">
+            {title2}
           </h2>
         </div>
       </motion.div>

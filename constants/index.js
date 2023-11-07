@@ -18,37 +18,37 @@ export const sidebarLinks = [
   {
 
     route: "/lanuches/LaunchDetails?title=Aditya-L1",
-    label: "Aditya-L1",
+    label: "ADITYA-L1",
   },
   {
 
     route: "/lanuches/LaunchDetails?title=Chandrayaan-3",
-    label: "Chandrayaan-3",
+    label: "CHANDRAYANN-3",
   },
   {
 
     route: "/gaganyaan",
-    label: "Gaganyaan",
+    label: "GAGAANYAAN",
   },
   {
 
     route: "/mission",
-    label: "Mission",
+    label: "MISSON",
   },
   {
 
     route: "/launches",
-    label: "Launches",
+    label: "LAUNCHES",
   },
   {
 
     route: "/launchers",
-    label: "Launchers",
+    label: "LAUNCHERS",
   },
   {
 
     route: "/updates",
-    label: "Updates",
+    label: "UPDATES",
   },
 
 ];

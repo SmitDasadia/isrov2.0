@@ -36,12 +36,12 @@ const Navbar: React.FC = () => {
               <img src="/isrologo.png" className="sm:w-36" alt="logo" />
             </div>
           </Link>
-          <div className="hidden sm:flex sm:flex-grow sm:justify-center md:mr-4">
+          <div className="hidden sm:flex sm:flex-grow sm:justify-center sm:mr-9">
             {sidebarLinks.slice(0, 6).map((link) => (
               <Link href={link.route} key={link.label}>
-                <div className="text-md sm:text-lg text-white px-5 sm:px-3 md:px-3 lg:px-5 font-semibold sidebar-link">
+                <div className="text-md sm:text-lg text-white px-5 sm:px-3 md:px-3 lg:px-5 font-semibold hover:text-gray-300">
                   {link.label}
-                  <div className="link-underline"></div>
+                  
                 </div>
               </Link>
             ))}
@@ -86,12 +86,9 @@ const Navbar: React.FC = () => {
                     href={link.route}
                     key={link.label}
                     onClick={closeMenu}
-                    className={`relative flex items-center p-2 sm:p-1 rounded-lg sidebar-link ${
-                      isActive ? "text-white font-bold" : "text-white"
-                    }`}
+                    className={`relative flex items-center p-2 sm:p-1 rounded-lg text-white font-semibold hover:text-gray-300`}
                   >
                     <div className="text-lg sm:text-xl">{link.label}</div>
-                    <div className="link-underline"></div>
                   </Link>
                 );
               })}
@@ -107,12 +104,10 @@ const Navbar: React.FC = () => {
                     href={link.route}
                     key={link.label}
                     onClick={closeMenu}
-                    className={`relative flex items-center p-2 sm:p-1 rounded-lg sidebar-link ${
-                      isActive ? "text-white font-bold" : "text-white"
-                    }`}
+                    className={`relative flex items-center p-2 sm:p-1 rounded-lg  text-white font-semibold hover:text-gray-300`}
                   >
                     <div className="text-lg sm:text-xl">{link.label}</div>
-                    <div className="link-underline"></div>
+                   
                   </Link>
                 );
               })}

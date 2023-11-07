@@ -17,7 +17,8 @@ export default function Home() {
 
       <Mainhero
         backgroundImageUrl="/lunches/bg6.png"
-        title="Space Tech Serving Humanity"
+        title="Space Tech"
+        title2="Serving Humanity"
       />
 
       <ReusableHeroSection

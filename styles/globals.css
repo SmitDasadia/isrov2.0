@@ -11,8 +11,8 @@
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px; /* Height of the underline */
-  background-color: #efe6e6; /* Color of the underline */
+  height: 2px;
+  background-color: #efe6e6; 
   transition: width 0.5s ease-in-out;
 }
 
@@ -24,5 +24,5 @@
 }
 
 .sidebar-link:hover .link-underline {
-  width: 100%; /* Expand the underline to 100% on hover */
+  width: 100%;
 }

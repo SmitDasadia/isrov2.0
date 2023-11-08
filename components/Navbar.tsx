@@ -39,13 +39,16 @@ const Navbar: React.FC = () => {
           <div className="hidden sm:flex sm:flex-grow sm:justify-center sm:mr-9">
             {sidebarLinks.slice(0, 6).map((link) => (
               <Link href={link.route} key={link.label}>
-                <div className="text-md sm:text-lg text-white px-5 sm:px-3 md:px-3 lg:px-5 font-semibold hover:text-gray-300">
-                  {link.label}
-                  
+                <div className="text-white px-5 sm:px-3 md:px-3 lg:px-5 font-semibold sidebar-link relative">
+                  <div className="text-md sm:text-lg transform scale-100 hover:scale-110">
+                    {link.label}
+                    <div className="link-underline"></div>
+                  </div>
                 </div>
               </Link>
             ))}
           </div>
+
           <button
             onClick={toggleSidebar}
             className="absolute top-9 right-7  sm:top-auto sm:right-7 "
@@ -75,7 +78,7 @@ const Navbar: React.FC = () => {
             >
               <CgClose size={28} className="text-white" />
             </span>
-            <nav className="hidden sm:flex w-full flex-1 flex-col gap-4 sm:gap-6 pt-8 sm:pt-20 p-4 sm:p-15">
+            <nav className="hidden sm:flex w-full flex-1 flex-col gap-2 sm:gap-4 pt-8 sm:pt-20 p-4 sm:p-15">
               {sidebarLinks.slice(6).map((link) => {
                 const isActive =
                   (pathname.includes(link.route) && link.route.length > 1) ||
@@ -86,14 +89,15 @@ const Navbar: React.FC = () => {
                     href={link.route}
                     key={link.label}
                     onClick={closeMenu}
-                    className={`relative flex items-center p-2 sm:p-1 rounded-lg text-white font-semibold hover:text-gray-300`}
+                    className={`relative flex items-center p-2 sm:p-1 rounded-lg text-white font-semibold hover:text-gray-800`}
                   >
-                    <div className="text-lg sm:text-xl">{link.label}</div>
+                    <div className="text-md sm:text-lg">{link.label}</div>
                   </Link>
                 );
               })}
             </nav>
-            <nav className="flex sm:hidden w-full flex-1 flex-col gap-4 sm:gap-6 pt-8 sm:pt-20 p-4 sm:p-15">
+
+            <nav className="flex sm:hidden w-full flex-1 flex-col gap-4 pt-8 sm:pt-20 p-4 sm:p-15">
               {sidebarLinks.map((link) => {
                 const isActive =
                   (pathname.includes(link.route) && link.route.length > 1) ||
@@ -104,10 +108,9 @@ const Navbar: React.FC = () => {
                     href={link.route}
                     key={link.label}
                     onClick={closeMenu}
-                    className={`relative flex items-center p-2 sm:p-1 rounded-lg  text-white font-semibold hover:text-gray-300`}
+                    className={`relative flex items-center p-2 sm:p-1 rounded-lg  text-white font-semibold hover:text-gray-800`}
                   >
-                    <div className="text-lg sm:text-xl">{link.label}</div>
-                   
+                    <div className="text-md sm:text-lg">{link.label}</div>
                   </Link>
                 );
               })}

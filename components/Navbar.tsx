@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
             onClick={toggleSidebar}
             className="absolute top-9 right-7  sm:top-auto sm:right-7 "
           >
-            <CgMenuRightAlt size={28} className="text-white" />
+            <CgMenuRightAlt size={24} className="text-white" />
           </button>
         </div>
       </header>
@@ -74,9 +74,9 @@ const Navbar: React.FC = () => {
           >
             <span
               onClick={toggleSidebar}
-              className="absolute top-6 right-6 cursor-pointer text-xl sm:text-2xl text-white"
+              className="absolute top-12 right-9 cursor-pointer text-xl sm:text-2xl text-white"
             >
-              <CgClose size={28} className="text-white" />
+              <CgClose size={24} className="text-white" />
             </span>
             <nav className="hidden sm:flex w-full flex-1 flex-col gap-2 sm:gap-4 pt-8 sm:pt-20 p-4 sm:p-15">
               {sidebarLinks.slice(6).map((link) => {

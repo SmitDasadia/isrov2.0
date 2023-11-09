@@ -60,7 +60,7 @@ const ReusableHeroSection: FC<ReusableHeroSectionProps> = ({
           </p>
         </div>
         <Link href={buttonLink}>
-          <button className="self-start ml-8 mb-16 border-2 hover:bg-white hover:text-black text-white py-3 px-10 text-lg font-semibold transition duration-300">
+          <button className="self-start ml-8 mb-16 border-2 hover:bg-white hover:text-black text-white py-3 px-9 text-md font-semibold transition duration-300">
             {buttonText}
           </button>
         </Link>

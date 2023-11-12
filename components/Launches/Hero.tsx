@@ -31,7 +31,7 @@ const Hero: React.FC<HeroProps> = ({ backgroundImage, title, subtitle }) => {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black opacity-40"></div>
+      <div className="absolute inset-0 bg-black opacity-5"></div>
 
       {/* Content */}
       <motion.div

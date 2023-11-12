@@ -51,7 +51,7 @@ const ReusableHeroSection: FC<ReusableHeroSectionProps> = ({
         animate={isMounted ? "visible" : "hidden"} // Trigger animation when  initial="hidden"
         variants={fadeInVariants}
       >
-        <div className="mb-8 ml-8">
+        <div className="mb-8 ml-4">
           <h2 className="text-lg sm:text-xl md:text-2xl text-white pb-2">
             {title}
           </h2>
@@ -60,7 +60,7 @@ const ReusableHeroSection: FC<ReusableHeroSectionProps> = ({
           </p>
         </div>
         <Link href={buttonLink}>
-          <button className="self-start ml-8 mb-16 border-2 hover:bg-white hover:text-black text-white py-3 px-9 text-md font-semibold transition duration-300">
+          <button className="self-start ml-4 mb-16 border-2 hover:bg-white hover:text-black text-white py-3 px-9 text-md font-semibold transition duration-300">
             {buttonText}
           </button>
         </Link>

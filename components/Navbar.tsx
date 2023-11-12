@@ -29,18 +29,22 @@ const Navbar: React.FC = () => {
         zIndex: 999,
       }}
     >
-      <header className="p-2 sm:p-3 md:p-2">
-        <div className="container mx-auto flex items-center justify-center sm:justify-between">
+      <header className="p-2 ">
+        <div className="container flex items-center justify-center sm:justify-between">
           <Link href="/">
-            <div className="flex items-center p-3 sm:p-2">
-              <img src="/isrologo.png" className="sm:w-36" alt="logo" />
+            <div className="flex items-center p-2">
+              <img
+                src="/isrologo.png"
+                className="sm:ml-6 sm:mx-auto"
+                alt="logo"
+              />
             </div>
           </Link>
-          <div className="hidden sm:flex sm:flex-grow sm:justify-center sm:mr-9">
+          <div className="hidden sm:flex sm:flex-grow sm:justify-center sm:ml-9">
             {sidebarLinks.slice(0, 6).map((link) => (
               <Link href={link.route} key={link.label}>
                 <div className="text-white px-5 sm:px-3 md:px-3 lg:px-5 font-semibold sidebar-link relative">
-                  <div className="text-md sm:text-lg transform scale-100 hover:scale-110">
+                  <div className="text-sm sm:text-md transform scale-100 hover:scale-110">
                     {link.label}
                     <div className="link-underline"></div>
                   </div>
@@ -70,11 +74,11 @@ const Navbar: React.FC = () => {
               damping: 20, // Adjust the damping for smoother animation
               duration: 0.2, // Adjust the duration for smoother animation
             }}
-            className={`flex-col justify-between gap-12 h-screen overflow-auto sidebar fixed top-0 right-0 bg-black text-white p-4 sm:p-10 transform-all transition-width duration-100 z-50 w-2/3 sm:w-2/3 lg:w-1/3 xl:w-1/4 `}
+            className={`flex-col justify-between gap-12 h-screen overflow-auto sidebar fixed top-0 right-0 bg-black text-white p-4 sm:p-10 transform-all transition-width duration-100 z-50 w-2/3 sm:w-1/3 lg:w-1/3 xl:w-1/4 `}
           >
             <span
               onClick={toggleSidebar}
-              className="absolute top-12 right-9 cursor-pointer text-xl sm:text-2xl text-white"
+              className="absolute top-7 right-9 cursor-pointer text-xl sm:text-2xl text-white"
             >
               <CgClose size={24} className="text-white" />
             </span>
@@ -91,7 +95,7 @@ const Navbar: React.FC = () => {
                     onClick={closeMenu}
                     className={`relative flex items-center p-2 sm:p-1 rounded-lg text-white font-semibold hover:text-gray-800`}
                   >
-                    <div className="text-md sm:text-lg">{link.label}</div>
+                    <div className="text-sm sm:text-md ">{link.label}</div>
                   </Link>
                 );
               })}
@@ -110,7 +114,7 @@ const Navbar: React.FC = () => {
                     onClick={closeMenu}
                     className={`relative flex items-center p-2 sm:p-1 rounded-lg  text-white font-semibold hover:text-gray-800`}
                   >
-                    <div className="text-md sm:text-lg">{link.label}</div>
+                    <div className="text-sm sm:text-md">{link.label}</div>
                   </Link>
                 );
               })}

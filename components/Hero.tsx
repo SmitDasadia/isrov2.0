@@ -44,7 +44,7 @@ const ReusableHeroSection: FC<ReusableHeroSectionProps> = ({
       className="relative h-screen flex bg-center bg-cover"
       style={sectionStyle}
     >
-      <div className="absolute inset-0 bg-black opacity-10"></div>
+     
       <motion.div
         className="container mx-auto flex flex-col justify-end h-full relative z-10 pb-10"
         initial="hidden"

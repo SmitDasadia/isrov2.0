@@ -114,7 +114,7 @@ const Navbar: React.FC = () => {
                     onClick={closeMenu}
                     className={`relative flex items-center p-2 sm:p-1 rounded-lg  text-white font-semibold hover:text-gray-800`}
                   >
-                    <div className="text-sm sm:text-md">{link.label}</div>
+                    <div className="text-md sm:text-lg">{link.label}</div>
                   </Link>
                 );
               })}

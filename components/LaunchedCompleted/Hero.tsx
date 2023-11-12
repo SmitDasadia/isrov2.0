@@ -35,7 +35,7 @@ const Hero: FC<HeroProps> = ({ title, subtitle, backgroundImage }) => {
         animate="visible"
         variants={fadeInVariants}
       >
-        <div className="mb-8 ml-4">
+        <div className="mb-8 ml-8 sm:ml-4">
           <p className="text-xl sm:text-2xl  text-white font-semibold">
             {subtitle}
           </p>

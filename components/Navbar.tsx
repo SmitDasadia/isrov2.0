@@ -3,7 +3,7 @@
 import React, { useRef, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { CgClose, CgMenuRightAlt } from "react-icons/cg";
+import { CgClose,CgMenu } from "react-icons/cg";
 import { sidebarLinks } from "@/constants/index";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
             onClick={toggleSidebar}
             className="absolute top-9 right-7  sm:top-auto sm:right-7 "
           >
-            <CgMenuRightAlt size={24} className="text-white" />
+            <CgMenu size={20} className="text-white" />
           </button>
         </div>
       </header>
@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
               onClick={toggleSidebar}
               className="absolute top-7 right-9 cursor-pointer text-xl sm:text-2xl text-white"
             >
-              <CgClose size={24} className="text-white" />
+              <CgClose size={20} className="text-white" />
             </span>
             <nav className="hidden sm:flex w-full flex-1 flex-col gap-2 sm:gap-4 pt-8 sm:pt-20 p-4 sm:p-15">
               {sidebarLinks.slice(6).map((link) => {

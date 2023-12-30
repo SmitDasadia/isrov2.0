@@ -1,41 +1,37 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 import Hero from "@/components/LaunchedCompleted/Hero";
 import Info from "@/components/LaunchedCompleted/Info";
 import { upcominglaunches } from "@/lib/data/UpcomingLaunches";
 import ReusableHead from "@/components/Head";
-import FlightEvent from "@/components/UpcomingLaunch/FlightEvent";
 
-const Upcominglaunch = () => {
+const UpcomingLaunch = () => {
   const router = useRouter();
   const { title } = router.query;
 
-  const LaunchDetails = upcominglaunches.find(
-    (launch) => launch.title === title
+  const UpcomingLaunch = upcominglaunches.find(
+    (lunch: any) => lunch.title === title
   );
 
-  useEffect(() => {
-    if (!LaunchDetails) {
-      router.push("/");
-    }
-  }, [LaunchDetails, router]);
+  if (!UpcomingLaunch) {
+    return <div>Launch details not found.</div>;
+  }
 
-  const missiontitle = LaunchDetails?.title || "";
-  const subtitle = LaunchDetails?.subtitle || "";
-  const backgroundImage = LaunchDetails?.backgroundImage || "";
-  const videoLink = LaunchDetails?.videoLink || "";
-  const description = LaunchDetails?.desc || "";
-  const moreInfoLink = LaunchDetails?.moreInfoLink || "";
-  const flightEvents = LaunchDetails?.flightEvents || [];
+  const missiontitle = UpcomingLaunch?.title || "";
+  const subtitle = UpcomingLaunch?.subtitle || "";
+  const backgroundImage = UpcomingLaunch?.backgroundImage || "";
+  const videoLink = UpcomingLaunch?.videoLink || "";
+  const description = UpcomingLaunch?.desc || "";
+  const moreInfoLink = UpcomingLaunch?.moreInfoLink || "";
 
   return (
-    <div>
+    <section>
       <ReusableHead title={`Isro - ${missiontitle}`} />
 
       <Hero
-        title={missiontitle}
+        title={subtitle}
         backgroundImage={backgroundImage}
-        subtitle={"Upcoming Launch"}
+        subtitle={"UPCOMING LAUNCH"}
       />
       <Info
         title={missiontitle}
@@ -44,10 +40,8 @@ const Upcominglaunch = () => {
         videoLink={videoLink}
         subtitle={subtitle}
       />
-
-      <FlightEvent flightEvents={flightEvents} />
-    </div>
+    </section>
   );
 };
 
-export default Upcominglaunch;
+export default UpcomingLaunch;

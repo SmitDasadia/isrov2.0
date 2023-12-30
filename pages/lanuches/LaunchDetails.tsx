@@ -1,6 +1,5 @@
 import React from "react";
 import { useRouter } from "next/router";
-import Head from "next/head";
 import Hero from "@/components/LaunchedCompleted/Hero";
 import Info from "@/components/LaunchedCompleted/Info";
 import { lunches } from "@/lib/data/lunches";
@@ -24,7 +23,7 @@ const LaunchDetails = () => {
   const moreInfoLink = LaunchDetails?.moreInfoLink || "";
 
   return (
-    <div>
+    <section>
        <ReusableHead title={`Isro - ${missiontitle}`} /> 
      
       <Hero
@@ -39,7 +38,7 @@ const LaunchDetails = () => {
         videoLink={videoLink}
         subtitle={subtitle}
       />
-    </div>
+    </section>
   );
 };
 

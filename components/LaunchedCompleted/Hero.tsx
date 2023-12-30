@@ -36,10 +36,10 @@ const Hero: FC<HeroProps> = ({ title, subtitle, backgroundImage }) => {
         variants={fadeInVariants}
       >
         <div className="mb-8 ml-8 sm:ml-4">
-          <p className="text-xl sm:text-2xl  text-white font-semibold">
-            {subtitle}
-          </p>
-          <h2 className="text-4xl sm:text-6xl  text-white pb-2 font-extrabold">
+          <h3 className="text-lg sm:text-xl md:text-2xl text-white pb-2">
+          {subtitle}
+          </h3>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl text-white font-extrabold">
             {title}
           </h2>
         </div>

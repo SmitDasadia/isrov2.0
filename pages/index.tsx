@@ -1,15 +1,10 @@
 "use client";
-import { Inter } from "next/font/google";
+
 import ReusableHeroSection from "@/components/Hero";
 import Mainhero from "@/components/Mainhero";
 import ReusableHead from "@/components/Head";
-import UpcommingLaunch from "@/components/UpcomingLaunch";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  // Example launch date and time (replace with your actual launch date and time)
-  const launchDateTime = new Date("2023-10-21T08:00:00");
 
   return (
     <main>
@@ -25,7 +20,7 @@ export default function Home() {
         backgroundImageUrl="/UpcommingLaunch/xposat.png"
         title="Upcomming Launch"
         subtitle="XPoSat Mission"
-        buttonText="Watch Now"
+        buttonText="WATCH"
         buttonLink="/lanuches/UpcomingLaunch?title=XPoSat"
       />
 
@@ -33,7 +28,7 @@ export default function Home() {
         backgroundImageUrl="/LaunchCompleted/TV-D1.png"
         title="Recent Launch"
         subtitle="Gaganyaan TV-D1"
-        buttonText="More Info"
+        buttonText="REWATCH"
         buttonLink="/lanuches/LaunchDetails?title=GAGANYAAN-TV-D1"
       />
 
@@ -41,7 +36,7 @@ export default function Home() {
         backgroundImageUrl="/LaunchCompleted/Aditya_L1Lunch1.png"
         title="Recent Launch"
         subtitle="ADITYA-L1"
-        buttonText="More Info"
+        buttonText="REWATCH"
         buttonLink="/lanuches/LaunchDetails?title=Aditya-L1"
       />
     </main>

@@ -4,6 +4,7 @@ import Hero from "@/components/LaunchedCompleted/Hero";
 import Info from "@/components/LaunchedCompleted/Info";
 import { upcominglaunches } from "@/lib/data/UpcomingLaunches";
 import ReusableHead from "@/components/Head";
+import FlightEvent from "@/components/UpcomingLaunch/FlightEvent";
 
 const Upcominglaunch = () => {
   const router = useRouter();
@@ -44,31 +45,7 @@ const Upcominglaunch = () => {
         subtitle={subtitle}
       />
 
-      <div className="p-10 text-white">
-        <h1 className="text-3xl sm:text-5xl font-bold mb-8 text-center">
-          Flight Events
-        </h1>
-        <table className="w-full ">
-          <thead>
-            <tr className=" text-xs sm:text-xl font-bold text-white">
-              <th className="p-2">Event</th>
-              <th className="p-2">Time (s)</th>
-              <th className="p-2">Altitude (km)</th>
-              <th className="p-2">Relative Velocity (m/s)</th>
-            </tr>
-          </thead>
-          <tbody>
-            {flightEvents.map((event: any, index: number) => (
-              <tr key={index} className="text-white font-semibold ">
-                <td className="p-4 border-b-[0.2px] ">{event.Event}</td>
-                <td className="p-4 border-b-[0.2px] text-center">{event.Time}</td>
-                <td className="p-4 border-b-[0.2px] text-center">{event.Altitude} km</td>
-                <td className="p-4 border-b-[0.2px] text-center">{event.Velocity} m/s</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <FlightEvent flightEvents={flightEvents} />
     </div>
   );
 };

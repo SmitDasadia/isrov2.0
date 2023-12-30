@@ -22,6 +22,14 @@ export default function Home() {
       />
 
       <ReusableHeroSection
+        backgroundImageUrl="/UpcommingLaunch/xposat.png"
+        title="Upcomming Launch"
+        subtitle="XPoSat Mission"
+        buttonText="Watch Now"
+        buttonLink="/lanuches/UpcomingLaunch?title=XPoSat"
+      />
+
+      <ReusableHeroSection
         backgroundImageUrl="/LaunchCompleted/TV-D1.png"
         title="Recent Launch"
         subtitle="Gaganyaan TV-D1"
@@ -35,20 +43,6 @@ export default function Home() {
         subtitle="ADITYA-L1"
         buttonText="More Info"
         buttonLink="/lanuches/LaunchDetails?title=Aditya-L1"
-      />
-      <ReusableHeroSection
-        backgroundImageUrl="/LaunchCompleted/DS-SAR-Launch.png"
-        title="Launch Compelted"
-        subtitle="DS-SAR"
-        buttonText="More Info"
-        buttonLink="/lanuches/LaunchDetails?title=DS-SAR"
-      />
-      <ReusableHeroSection
-        backgroundImageUrl="/LaunchCompleted/chandrayann3Lunch4.png"
-        title="Launch Compelted"
-        subtitle="Chandrayaan-3"
-        buttonText="More Info"
-        buttonLink="/lanuches/LaunchDetails?title=Chandrayaan-3"
       />
     </main>
   );

@@ -24,7 +24,6 @@ const UpcomingLaunch = () => {
   const videoLink = UpcomingLaunch?.videoLink || "";
   const description = UpcomingLaunch?.desc || "";
   const moreInfoLink = UpcomingLaunch?.moreInfoLink || "";
-  const flightEvent = UpcomingLaunch?.flightEvents || "";
 
   return (
     <section>
@@ -42,8 +41,6 @@ const UpcomingLaunch = () => {
         videoLink={videoLink}
         subtitle={subtitle}
       />
-
-      <FlightEvent flightEvents={flightEvent}/>
     </section>
   );
 };

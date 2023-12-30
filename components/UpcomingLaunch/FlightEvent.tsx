@@ -8,8 +8,8 @@ interface FlightEventProps {
 const FlightEvent: FC<FlightEventProps> = ({ flightEvents }) => {
   return (
     <motion.section className="min-h-screen bg-black text-white">
-      <div className="container mx-auto flex justify-center items-center">
-        <div className="container mx-auto p-10">
+      <div className="container mx-auto flex justify-center items-center w-full">
+        <div className="container mx-auto p-10 ">
           <h1 className="text-3xl sm:text-5xl font-bold mb-8 ">
             Flight Events
           </h1>
@@ -26,15 +26,9 @@ const FlightEvent: FC<FlightEventProps> = ({ flightEvents }) => {
               {flightEvents.map((event: any, index: number) => (
                 <tr key={index} className="text-white font-semibold ">
                   <td className="p-4 border-b-[0.2px]">{event.Event}</td>
-                  <td className="p-4 border-b-[0.2px]">
-                    {event.Time}
-                  </td>
-                  <td className="p-4 border-b-[0.2px]">
-                    {event.Altitude} km
-                  </td>
-                  <td className="p-4 border-b-[0.2px]">
-                    {event.Velocity} m/s
-                  </td>
+                  <td className="p-4 border-b-[0.2px]">{event.Time}</td>
+                  <td className="p-4 border-b-[0.2px]">{event.Altitude} km</td>
+                  <td className="p-4 border-b-[0.2px]">{event.Velocity} m/s</td>
                 </tr>
               ))}
             </tbody>

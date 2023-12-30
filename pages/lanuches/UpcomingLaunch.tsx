@@ -4,6 +4,7 @@ import Hero from "@/components/LaunchedCompleted/Hero";
 import Info from "@/components/LaunchedCompleted/Info";
 import { upcominglaunches } from "@/lib/data/UpcomingLaunches";
 import ReusableHead from "@/components/Head";
+import FlightEvent from "@/components/UpcomingLaunch/FlightEvent";
 
 const UpcomingLaunch = () => {
   const router = useRouter();
@@ -23,6 +24,7 @@ const UpcomingLaunch = () => {
   const videoLink = UpcomingLaunch?.videoLink || "";
   const description = UpcomingLaunch?.desc || "";
   const moreInfoLink = UpcomingLaunch?.moreInfoLink || "";
+  const flightEvent = UpcomingLaunch?.flightEvents || "";
 
   return (
     <section>
@@ -40,6 +42,8 @@ const UpcomingLaunch = () => {
         videoLink={videoLink}
         subtitle={subtitle}
       />
+
+      <FlightEvent flightEvents={flightEvent}/>
     </section>
   );
 };

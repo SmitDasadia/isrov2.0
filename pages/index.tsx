@@ -17,11 +17,11 @@ export default function Home() {
       />
 
       <ReusableHeroSection
-        backgroundImageUrl="/UpcommingLaunch/xposat.webp"
-        title="Upcomming Launch"
+        backgroundImageUrl="/LaunchCompleted/XPoSat.png"
+        title="Recent Launch"
         subtitle="XPoSat Mission"
-        buttonText="WATCH"
-        buttonLink="/lanuches/UpcomingLaunch?title=XPoSat"
+        buttonText="REWATCH"
+        buttonLink="/lanuches/LaunchDetails?title=XPoSat"
       />
 
       <ReusableHeroSection

@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
   return (
     
     <footer className="bg-black text-white body-font">
-      <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <div className="container px-5 py-4 mx-auto flex items-center sm:flex-row flex-col">
         <p className="text-lg font-semibold  ">&copy; {new Date().getFullYear()} Isro</p>
 
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
